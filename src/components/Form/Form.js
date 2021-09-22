@@ -2,11 +2,13 @@ import React, { Component } from 'react';
 import './Form.css';
 
 class Form extends Component {
-  constructor(props) {
+  constructor( props ) {
     super();
     this.state = {
       lat: '',
+      // 39.7331
       long: ''
+      // -104.9524
     }
   }
 
@@ -14,15 +16,16 @@ class Form extends Component {
     this.setState({ [event.target.name]: event.target.value });
   } 
 
-  searchRestrooms = event => {
+  handleClick = event => {
     event.preventDefault();
-    this.props.fetchRestrooms();
-    this.clearInputs();    
+    // console.log(this.state.lat)
+    this.props.fetchRestrooms(this.state.lat, this.state.long);
+    // this.clearInputs();    
   }    
 
-  clearInputs = () => {
-    this.setState({ lat: '', long: '' });
-  }       
+  // clearInputs = () => {
+  //   this.setState({ lat: '', long: '' });
+  // }       
 
   render() {
     return (
@@ -32,7 +35,7 @@ class Form extends Component {
             type='text'
             placeholder='Latitude'
             name='lat'
-            value={this.state.lat}
+            // value={this.state.lat}
             onChange={event => this.handleChange(event)}
           />
 
@@ -40,13 +43,13 @@ class Form extends Component {
             type='text'
             placeholder='Longitude'
             name='long'
-            value={this.state.long}
+            // value={this.state.long}
             onChange={event => this.handleChange(event)}
           />          
 
           <button
             className='show-list-btn'
-            onClick={event => this.searchRestrooms(event)}
+            onClick={event => this.handleClick(event)}
           >Show List</button>
         </form>
       </article>

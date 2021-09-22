@@ -10,27 +10,31 @@ class App extends Component {
       restrooms: [],
       errorKey: ''
     }
-  }
+  };
 
-  fetchRestrooms() {
-    const url = 'https://www.refugerestrooms.org/api/v1/restrooms/by_location?page=1&per_page=100&offset=0&lat=39.7331&lng=-104.9524'
+  fetchRestrooms = (lat, long) => {
+    const url = `https://www.refugerestrooms.org/api/v1/restrooms/by_location?page=1&per_page=100&offset=0&lat=${lat}&lng=${long}`
+
     fetch(url)
       .then(response => response.json())
-      .then(data => this.setState({restrooms: data}))
+      .then(data => {
+        console.log(data)
+        this.setState({restrooms: data})
+      })
       .catch(error => this.setState({errorKey: error})
     )
-  }  
+  }
 
   render() {
     return (
       <div className="App">
         <div className='home-page'>
           <h1 className='app-title'>Affirming Access</h1>        
-          <Form />    
+          <Form fetchRestrooms={this.fetchRestrooms} />    
         </div>      
 
         <div className='restrooms-container'>
-          <Restrooms restrooms={this.state.restrooms} fetchRestrooms={this.fetchRestrooms} />    
+          <Restrooms restrooms={this.state.restrooms}  />    
         </div>
       </div>
     );
