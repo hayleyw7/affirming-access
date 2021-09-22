@@ -85,7 +85,6 @@ class App extends Component {
     return (
       <div className="App">
         <h1 className='app-title'>Affirming Access</h1>
-        <h2>test</h2>
         <div className='restrooms-container'>
           <Restrooms restrooms={this.state.restrooms} />    
         </div>
