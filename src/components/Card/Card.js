@@ -2,10 +2,10 @@
 import React from 'react';
 import './Card.css';
 
-const Card = () => {
+const Card = ({ business }) => {
   return (
     <div className='card'>
-      <h3>restrooms here</h3>
+      <h3>{business}</h3>
     </div>
   )
 }

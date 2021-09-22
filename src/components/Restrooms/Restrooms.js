@@ -7,7 +7,7 @@ const Restrooms = () => {
 const restroomCards = () => {
     return (
       <Card
-        business='business' 
+        business='business-name-here' 
       />
     )
   }
