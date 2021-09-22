@@ -82,7 +82,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    const url = 'https://www.refugerestrooms.org/api/v1/restrooms/by_location?page=1&per_page=10&offset=0&lat=39.7331&lng=-104.9524'
+    const url = 'https://www.refugerestrooms.org/api/v1/restrooms/by_location?page=1&per_page=100&offset=0&lat=39.7331&lng=-104.9524'
     fetch(url)
       .then(response => response.json())
       .then(data => this.setState({restrooms: data}))
