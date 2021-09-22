@@ -1,24 +1,58 @@
-import React from 'react';
-import Card from '../Card/Card';
-import './Reservations.css';
+import React, { Component } from 'react';
+import './Form.css';
 
-const Reservations = ({ reservations, cancelReservation }) => {
-  const reservationCards = reservations.map(reservation => {
+class Form extends Component {
+  constructor(props) {
+    super();
+    this.state = {
+      lat: '',
+      long: '',
+      genderFreeChecked: false,
+    }
+  }
+
+  handleChange = event => {
+    this.setState({ [event.target.name]: event.target.value });
+  } 
+
+  searchRestrooms = event => {
+    event.preventDefault();
+    this.props.fetchRestrooms();
+    this.clearInputs();    
+  }    
+
+  clearInputs = () => {
+    this.setState({ lat: '', long: '', genderFreeChecked: false});
+  }       
+
+  render() {
     return (
-      <Card
-        name={reservation.name}
-        date={reservation.date}
-        time={reservation.time}
-        number={reservation.number}        
-        id={reservation.id}
-        key={reservation.id}
-        cancelReservation={cancelReservation}   
-      />
+      <article>
+        <form>
+          <input
+            type='text'
+            placeholder='Latitude'
+            name='lat'
+            value={this.state.lat}
+            onChange={event => this.handleChange(event)}
+          />
+
+          <input
+            type='text'
+            placeholder='Longitude'
+            name='long'
+            value={this.state.long}
+            onChange={event => this.handleChange(event)}
+          />          
+
+          <button
+            className='show-list-btn'
+            onClick={event => this.searchRestrooms(event)}
+          >Show List</button>
+        </form>
+      </article>
     )
-  })
-  return (
-    reservationCards
-  )  
+  }  
 }
 
-export default Reservations;
+export default Form;
