@@ -9,13 +9,17 @@
   text-align: center;
 }
 
+.home-page {
+  width: 100%;
+}
+
 .app-title {
   color: white;
   font-size: 50px;
   background: gray;
-  width: 100%;
   margin: 0;
   padding: 1rem;
+  min-width: 100%;
 }
 
 .restrooms-container {

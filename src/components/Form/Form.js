@@ -5,10 +5,8 @@ class Form extends Component {
   constructor( props ) {
     super();
     this.state = {
-      lat: '',
-      // 39.7331
-      long: ''
-      // -104.9524
+      zip: '',
+      errorKey: ''
     }
   }
 
@@ -16,16 +14,29 @@ class Form extends Component {
     this.setState({ [event.target.name]: event.target.value });
   } 
 
-  handleClick = event => {
+  fetchZip = (zip) => {
+    const url = `https://api.zippopotam.us/us/${zip}`
+
+    return fetch(url)
+      .then(response => response.json())
+      .then(data => {
+        return data.places
+      })
+      .catch(error => this.setState({errorKey: error})
+    )
+  }
+
+  handleClick = async (event) => {
     event.preventDefault();
-    // console.log(this.state.lat)
-    this.props.fetchRestrooms(this.state.lat, this.state.long);
-    // this.clearInputs();    
+    let places = await this.fetchZip(this.state.zip)
+    console.log(places)
+    this.props.fetchRestrooms(places[0].latitude, places[0].longitude);
+    this.clearInputs();    
   }    
 
-  // clearInputs = () => {
-  //   this.setState({ lat: '', long: '' });
-  // }       
+  clearInputs = () => {
+    this.setState({ lat: '', long: '' });
+  }       
 
   render() {
     return (
@@ -33,19 +44,11 @@ class Form extends Component {
         <form>
           <input
             type='text'
-            placeholder='Latitude'
-            name='lat'
+            placeholder='Zip Code'
+            name='zip'
             // value={this.state.lat}
             onChange={event => this.handleChange(event)}
-          />
-
-          <input
-            type='text'
-            placeholder='Longitude'
-            name='long'
-            // value={this.state.long}
-            onChange={event => this.handleChange(event)}
-          />          
+          />      
 
           <button
             className='show-list-btn'
