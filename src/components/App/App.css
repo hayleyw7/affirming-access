@@ -1,16 +1,20 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  margin-top: 2rem;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
 }
+
+.app-title {
+  background: black;
+  color: white;
+  width: 100%;
+  margin: 0;
+  padding: 1rem;
+}
+
+/* .restroom-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+} */
