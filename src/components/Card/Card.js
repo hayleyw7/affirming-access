@@ -2,10 +2,14 @@
 import React from 'react';
 import './Card.css';
 
-const Card = ({ business }) => {
+const Card = ({ name, street, city, state, distance }) => {
   return (
     <div className='card'>
-      <h3>{business}</h3>
+      <h3>{name}</h3>
+      <p>{street}</p>
+      <p>{city}</p>
+      <p>{state}</p>
+      <p>{distance}</p>
     </div>
   )
 }
