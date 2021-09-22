@@ -18,7 +18,7 @@ class App extends Component {
     fetch(url)
       .then(response => response.json())
       .then(data => {
-        console.log(data)
+        // console.log(data)
         this.setState({restrooms: data})
       })
       .catch(error => this.setState({errorKey: error})
