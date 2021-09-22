@@ -6,8 +6,7 @@ class Form extends Component {
     super();
     this.state = {
       lat: '',
-      long: '',
-      genderFreeChecked: false,
+      long: ''
     }
   }
 
@@ -22,7 +21,7 @@ class Form extends Component {
   }    
 
   clearInputs = () => {
-    this.setState({ lat: '', long: '', genderFreeChecked: false});
+    this.setState({ lat: '', long: '' });
   }       
 
   render() {
