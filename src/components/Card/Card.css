@@ -3,3 +3,7 @@
   width: 20rem;
   margin: 1rem;
 }
+
+.capitalize {
+  text-transform: capitalize;
+}
