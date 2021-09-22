@@ -22,7 +22,7 @@
 - [ ] Dev tools
 - [ ] Cypress
 
-## Checklist:
+## Checklist
 - [ ] Style guidelines
 - [ ] Self-review
 - [ ] Commented code if necessary
