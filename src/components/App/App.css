@@ -1,20 +1,25 @@
 .App {
-  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
 }
 
 .app-title {
-  background: black;
   color: white;
+  font-size: 50px;
+  background: gray;
   width: 100%;
   margin: 0;
   padding: 1rem;
 }
 
-/* .restroom-container {
+.restrooms-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-} */
+}
