@@ -15,6 +15,9 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">Affirming Access</header>
+        <div className='restrooms-container'>
+          <Restrooms restrooms={this.state.restrooms} />   
+        </div>
       </div>
     );
   }
