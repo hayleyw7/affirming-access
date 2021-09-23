@@ -12,4 +12,9 @@
   color: white;
   font-weight: bold;
   border: 0;
+  cursor: pointer;
+}
+
+.start-over-btn:hover {
+  transform: scale(1.1); 
 }

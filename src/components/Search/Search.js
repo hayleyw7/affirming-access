@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Search.css';
+import Footer from '../Footer/Footer';
 import { Link } from 'react-router-dom';
 
 class Search extends Component {
@@ -67,20 +68,8 @@ class Search extends Component {
           >Show List</button>
 
         </form>
-
-        <h4 className='euphoria'>You deserve gender euphoria.</h4>
-
-          <Link
-            to={'/faq'}
-            key='1'  
-          >
-
-            <button
-              className='faq-btn'
-            >FAQ</button>
-
-          </Link>            
-
+           
+        <Footer />
       </div>
     )
   }  
