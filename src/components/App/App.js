@@ -56,9 +56,9 @@ class App extends Component {
 
         <Route exact path='/faq' 
           render={() => 
-            <div>
+            <div className='faq-page'>
               <FAQ />
-              </div>
+            </div>
           }
         />
 

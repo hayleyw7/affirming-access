@@ -1,15 +1,29 @@
 .home-btn {
-  margin: .5rem;
-  border-radius: .2rem;
+  margin: .5rem .5rem 1.5rem .5rem;
+  border-radius: .25rem;
   background: white;
   color: black;
   border: 1px black solid;
-  /* font-size: 20px;   */
-  /* background: #DDDA25; */
+  font-size: 20px;
+    /* background: #DDDA25; */
   background: #ED998B;
   /* max-width: 12rem; */
-  padding: .5rem 1.5rem .5rem 1.5rem;
+  padding: 1rem 3rem 1rem 3rem;
   color: white;
   font-weight: bold;
   border: 0;
+}
+
+.faq-card {
+  text-align: left;
+  margin: 2rem;
+  border: 1px black solid;
+  width: 34rem;
+  border-radius: 1rem;
+  padding: 1rem 2rem 1rem 2rem;
+}
+
+.question {
+  font-weight: bold;
+  color: #38B3B4;
 }
