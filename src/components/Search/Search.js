@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Search.css';
+import Header from '../Header/Header';
 
 class Search extends Component {
   constructor( props ) {
@@ -42,10 +43,10 @@ class Search extends Component {
 
   render() {
     return (
-      <div>
-        <h1 className='app-title'>Affirming Access</h1>         
+      <div>    
+        <Header />
         <h3 className='find-safe'>Find Safe Restrooms Near You</h3>
-
+        
         <form>
 
           <input
