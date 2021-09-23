@@ -19,7 +19,7 @@ class App extends Component {
     fetch(url)
       .then(response => response.json())
       .then(data => {
-        console.log(data)
+        console.log('data from fetchRestrooms', data)
         this.setState({restrooms: data})
       })
       .catch(error => this.setState({errorKey: error})
@@ -40,7 +40,7 @@ class App extends Component {
 
   handleClick = async (zipFromLink) => {
     let location = await this.fetchZip(zipFromLink);
-    console.log(this.fetchZip(zipFromLink))
+    console.log('fetchZipFunction', this.fetchZip(zipFromLink))
     this.fetchRestrooms(location[0].latitude, location[0].longitude);
     // this.clearInputs();
   }
