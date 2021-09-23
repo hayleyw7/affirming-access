@@ -3,5 +3,9 @@ form {
 }
 
 input, button {
-  margin: 1rem;
+  margin: .5rem;
+  border-radius: .25rem;
+  background: white;
+  color: black;
+  border: 1px black solid;
 }

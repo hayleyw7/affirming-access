@@ -8,3 +8,38 @@
 .capitalize {
   text-transform: capitalize;
 }
+
+.rainbow {
+background-color: blue;  
+  float:left;
+  width: 70px;
+  height:70px;
+  border: 1px solid white;
+ 
+}
+.rainbow:first-child {
+background-color: red;  
+}
+.rainbow:nth-child(2) {
+background-color: orange;  
+}.rainbow:nth-child(3) {
+background-color: yellow;  
+}.rainbow:nth-child(4) {
+background-color: Chartreuse;  
+}.rainbow:nth-child(5) {
+background-color: cyan;  
+}.rainbow:nth-child(6) {
+background-color: blue;  
+}.rainbow:nth-child(7) {
+background-color: DarkOrchid;  
+}.rainbow:nth-child(8) {
+background-color: DeepPink;  
+}.rainbow:nth-child(9) {
+background-color: red;  
+}
+.rainbow:last-child {
+background-color: Chartreuse;  
+  float:left;
+  border: 1px solid white;
+  clear:both;
+}
