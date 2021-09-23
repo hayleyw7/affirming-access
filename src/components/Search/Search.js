@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './Search.css';
 import Header from '../Header/Header';
+import { Link } from 'react-router-dom';
 
 class Search extends Component {
   constructor( props ) {
@@ -70,6 +71,17 @@ class Search extends Component {
         </form>
 
         <h4 className='euphoria'>You deserve gender euphoria.</h4>
+
+          <Link
+            to={'/faq'}
+            key='1'  
+          >
+
+            <button
+              className='faq-btn'
+            >FAQ</button>
+
+          </Link>            
 
       </div>
     )

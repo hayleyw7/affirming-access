@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import Restrooms from '../Restrooms/Restrooms';
 import Search from '../Search/Search';
+import FAQ from '../FAQ/FAQ';
+import { Route } from "react-router";
 
 class App extends Component {
   constructor(props) {
@@ -38,13 +40,28 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className='search-page'>     
-          <Search fetchRestrooms={this.fetchRestrooms} hideSearchPage={this.hideSearchPage} showRestroomsPage={this.showRestroomsPage}/>    
-        </div>      
+        <Route exact path='/' 
+          render={() => 
+            <div>
+              <div className='search-page'>     
+                <Search fetchRestrooms={this.fetchRestrooms} hideSearchPage={this.hideSearchPage} showRestroomsPage={this.showRestroomsPage}/>    
+              </div>      
 
-        <div className='restrooms-page hidden'>
-          <Restrooms restrooms={this.state.restrooms} />
-        </div>
+              <div className='restrooms-page hidden'>
+                <Restrooms restrooms={this.state.restrooms} />
+              </div>
+            </div>  
+          }
+        /> 
+
+        <Route exact path='/faq' 
+          render={() => 
+            <div>
+              <FAQ />
+              </div>
+          }
+        />
+
       </div>
     );
   }
