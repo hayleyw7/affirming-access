@@ -39,13 +39,23 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className='search-page'>     
-          <Search fetchRestrooms={this.fetchRestrooms} hideSearchPage={this.hideSearchPage} showRestroomsPage={this.showRestroomsPage}/>    
-        </div>      
+        <Route exact path='/' 
+          render={() => 
+            <div>
+              <div className='search-page'>     
+                <Search fetchRestrooms={this.fetchRestrooms} hideSearchPage={this.hideSearchPage} showRestroomsPage={this.showRestroomsPage}/>    
+              </div>      
 
-        <div className='restrooms-page hidden'>
-          <Restrooms restrooms={this.state.restrooms} />
-        </div>
+              <div className='restrooms-page hidden'>
+                <Restrooms restrooms={this.state.restrooms} />
+              </div>
+            </div>  
+          }
+        /> 
+
+
+
+
       </div>
     );
   }
