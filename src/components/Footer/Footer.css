@@ -27,7 +27,12 @@
   animation: wiggle 2.5s infinite;
   margin: .3rem 0 -.3rem 0;
   /* height: 2rem; */ 
-  
+  cursor: pointer;
+}
+
+.faq-btn:hover {
+  color: #DCDCDC;
+  animation: none;
 }
 
 @keyframes wiggle {

@@ -30,6 +30,7 @@ input {
   color: white;
   font-weight: bold;
   border: 0;
+  cursor: pointer;
 }
 
 .show-list-btn:hover {
