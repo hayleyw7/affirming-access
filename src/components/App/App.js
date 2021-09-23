@@ -19,15 +19,15 @@ class App extends Component {
     fetch(url)
       .then(response => response.json())
       .then(data => {
-        // console.log(data)
+        console.log(data)
         this.setState({restrooms: data})
       })
       .catch(error => this.setState({errorKey: error})
     )
   }
 
-  fetchZip = (zip) => {
-    const url = `https://api.zippopotam.us/us/${zip}`
+  fetchZip = (zipFromHandleClick) => {
+    const url = `https://api.zippopotam.us/us/${zipFromHandleClick}`
 
     return fetch(url)
       .then(response => response.json())
@@ -38,9 +38,10 @@ class App extends Component {
     )
   }  
 
-  handleClick = async (zip) => {
-    let places = await this.fetchZip(zip);
-    this.fetchRestrooms(places[0].latitude, places[0].longitude);
+  handleClick = async (zipFromLink) => {
+    let location = await this.fetchZip(zipFromLink);
+    console.log(this.fetchZip(zipFromLink))
+    this.fetchRestrooms(location[0].latitude, location[0].longitude);
     // this.clearInputs();
   }
 
