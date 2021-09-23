@@ -1,5 +1,5 @@
 .home-btn {
-  margin: .5rem .5rem 1.5rem .5rem;
+  margin: .5rem .5rem 2rem .5rem;
   border-radius: .25rem;
   background: white;
   color: black;
@@ -27,3 +27,9 @@
   font-weight: bold;
   color: #38B3B4;
 }
+
+@media only screen and (max-width: 600px) {
+  .faq-card {
+    width: 15rem;
+  }
+}   

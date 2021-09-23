@@ -1,15 +1,11 @@
 import React from 'react';
 import './FAQ.css';
-import Header from '../Header/Header';
 import { Link } from 'react-router-dom';
 
 const FAQ = () => {
 
   return (
     <div className='faq-page'>    
-
-      <Header />
-
       <section className='faq-card'>    
 
         <p className='question'>
@@ -53,7 +49,7 @@ const FAQ = () => {
 
         <button
           className='home-btn'
-        >Search For Safe Restrooms Now</button>
+        >Find Safe Restrooms Now</button>
 
       </Link>   
 

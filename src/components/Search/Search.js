@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './Search.css';
-import Header from '../Header/Header';
 import { Link } from 'react-router-dom';
 
 class Search extends Component {
@@ -45,7 +44,6 @@ class Search extends Component {
   render() {
     return (
       <div>    
-        <Header />
         <h3 className='find-safe'>Find Safe Restrooms Near You</h3>
         
         <form>
