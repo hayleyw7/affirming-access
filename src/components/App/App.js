@@ -30,15 +30,20 @@ class App extends Component {
     searchPage.classList.add("hidden");
   }
 
+  showRestroomsPage = (e) => {
+    const restroomsPage = document.querySelector(".restrooms-page");
+    restroomsPage.classList.remove("hidden");
+  }
+
   render() {
     return (
       <div className="App">
         <div className='search-page'>     
-          <Search fetchRestrooms={this.fetchRestrooms} hideSearchPage={this.hideSearchPage}/>    
+          <Search fetchRestrooms={this.fetchRestrooms} hideSearchPage={this.hideSearchPage} showRestroomsPage={this.showRestroomsPage}/>    
         </div>      
 
-        <div className='restrooms-page'>
-            <Restrooms restrooms={this.state.restrooms}  />    
+        <div className='restrooms-page hidden'>
+          <Restrooms restrooms={this.state.restrooms} />
         </div>
       </div>
     );

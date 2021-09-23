@@ -29,6 +29,7 @@ class Search extends Component {
   handleClick = async (event) => {
     event.preventDefault();
     this.props.hideSearchPage();
+    this.props.showRestroomsPage();
     let places = await this.fetchZip(this.state.zip)
     console.log(places)
     this.props.fetchRestrooms(places[0].latitude, places[0].longitude);
@@ -43,7 +44,7 @@ class Search extends Component {
     return (
       <div>
         <h1 className='app-title'>Affirming Access</h1>         
-        <h3 className='find-safe'>Find safe restrooms near you.</h3>
+        <h3 className='find-safe'>Find Safe Restrooms Near You</h3>
 
         <form>
 
