@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Search.css';
+import { Link } from 'react-router-dom';
 
 class Search extends Component {
   constructor( props ) {
@@ -55,10 +56,22 @@ class Search extends Component {
             <input type="checkbox" id="checkbox" name="checkbox" value="true" className='checkbox'></input>
             <label for="checkbox" className='checkbox'>Gender Neutral Only?</label>           
           </article>
-          <button
-            className='show-list-btn'
+          
+          <Link
+            to={'/search'}
+            key='1'  
             onClick={event => this.handleClick(event)}
-          >Show List</button>
+          >
+
+            <button
+              className='show-list-btn'
+
+            >
+              Show List
+            </button>
+
+          </Link>
+
         </form>
         <h4 className='euphoria'>You deserve gender euphoria.</h4>
       </article>
