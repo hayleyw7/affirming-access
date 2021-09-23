@@ -28,6 +28,7 @@ class Search extends Component {
 
   handleClick = async (event) => {
     event.preventDefault();
+    this.props.hideSearchPage();
     let places = await this.fetchZip(this.state.zip)
     console.log(places)
     this.props.fetchRestrooms(places[0].latitude, places[0].longitude);

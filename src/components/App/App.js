@@ -26,15 +26,15 @@ class App extends Component {
   }
 
   hideSearchPage = (e) => {
-    const howTo = document.querySelector(".how-to");
-    howTo.classList.add("hidden");
-  }  
+    const searchPage = document.querySelector(".search-page");
+    searchPage.classList.add("hidden");
+  }
 
   render() {
     return (
       <div className="App">
         <div className='search-page'>     
-          <Search fetchRestrooms={this.fetchRestrooms} />    
+          <Search fetchRestrooms={this.fetchRestrooms} hideSearchPage={this.hideSearchPage}/>    
         </div>      
 
         <div className='restrooms-page'>
