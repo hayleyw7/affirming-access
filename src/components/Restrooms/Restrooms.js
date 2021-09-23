@@ -11,26 +11,26 @@ const Restrooms = ({ restrooms }) => {
 
   const restroomCards = restrooms.map(restroom => {
     return (
-      <div className='restrooms-container'>
-        <Card
-          name={restroom.name}
-          street={restroom.street}
-          city={restroom.city}
-          state={restroom.state}   
-          distance={restroom.distance}                
-          id={restroom.id}
-          key={restroom.id} 
-        />
-    </div>
+      <Card
+        name={restroom.name}
+        street={restroom.street}
+        city={restroom.city}
+        state={restroom.state}   
+        distance={restroom.distance}                
+        id={restroom.id}
+        key={restroom.id} 
+      />
     )
   })
 
   return (
     <div>
       <h2>Safe Restrooms Near You</h2>
-      
-      {restroomCards}
 
+      <div className='restrooms-container'>    
+        {restroomCards}
+      </div>
+      
         <button
           className='start-over-btn'
           onClick={event => window.location.reload(event)}       

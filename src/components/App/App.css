@@ -17,11 +17,12 @@
   /* background: #38B3B4; */
 }
 
-.restrooms-container {
+/* .restrooms-page {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-}
+  flex-direction: row;
+} */
 
 .hidden {
   display: none;
