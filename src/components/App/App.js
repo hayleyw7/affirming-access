@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Restrooms from '../Restrooms/Restrooms';
-import Form from '../Form/Form';
+import Search from '../Search/Search';
 
 class App extends Component {
   constructor(props) {
@@ -30,7 +30,7 @@ class App extends Component {
       <div className="App">
         <div className='home-page'>
           <h1 className='app-title'>Affirming Access</h1>        
-          <Form fetchRestrooms={this.fetchRestrooms} />    
+          <Search fetchRestrooms={this.fetchRestrooms} />    
         </div>      
 
         <div className='restrooms-page'>
