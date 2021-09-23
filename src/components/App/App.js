@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Restrooms from '../Restrooms/Restrooms';
 import Form from '../Form/Form';
+import { Router, Route, Switch } from "react-router";
 
 class App extends Component {
   constructor(props) {
