@@ -30,7 +30,7 @@ class Search extends Component {
   handleClick = async (event) => {
     event.preventDefault();
     let places = await this.fetchZip(this.state.zip)
-    console.log(places)
+    // console.log(places)
     this.props.fetchRestrooms(places[0].latitude, places[0].longitude);
     this.clearInputs();    
   }    
@@ -57,20 +57,20 @@ class Search extends Component {
             <label for="checkbox" className='checkbox'>Gender Neutral Only?</label>           
           </article>
           
-          <Link
+          {/* <Link
             to={'/search'}
             key='1'  
-            onClick={event => this.handleClick(event)}
-          >
+
+          > */}
 
             <button
               className='show-list-btn'
-
+            onClick={event => this.handleClick(event)}
             >
               Show List
             </button>
 
-          </Link>
+          {/* </Link> */}
 
         </form>
         <h4 className='euphoria'>You deserve gender euphoria.</h4>

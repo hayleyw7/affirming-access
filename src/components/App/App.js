@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Restrooms from '../Restrooms/Restrooms';
 import Search from '../Search/Search';
-import { Router, Route, Switch } from "react-router";
+import { Route } from "react-router";
 
 class App extends Component {
   constructor(props) {
@@ -39,7 +39,7 @@ class App extends Component {
           }
         />    
 
-        <Route exact path='/search' 
+        <Route exact path='/' 
           render={() => 
             <div className='restrooms-page'>
               <h2>Recommended Restrooms Near You</h2>
