@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Restrooms from '../Restrooms/Restrooms';
 import Search from '../Search/Search';
+import FAQ from '../FAQ/FAQ';
 import { Route } from "react-router";
 
 class App extends Component {
@@ -53,8 +54,13 @@ class App extends Component {
           }
         /> 
 
-
-
+        <Route exact path='/faq' 
+          render={() => 
+            <div>
+              <FAQ />
+              </div>
+          }
+        />
 
       </div>
     );

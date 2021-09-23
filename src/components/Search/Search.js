@@ -71,6 +71,11 @@ class Search extends Component {
 
         <h4 className='euphoria'>You deserve gender euphoria.</h4>
 
+          <button
+            className='faq-btn'
+            onClick={event => this.handleClick(event)}
+          >FAQ</button>
+
       </div>
     )
   }  
