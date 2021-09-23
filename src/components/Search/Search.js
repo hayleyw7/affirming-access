@@ -68,17 +68,7 @@ class Search extends Component {
           >Show List</button>
 
         </form>
-
-          <Link
-            to={'/faq'}
-            key='1'  
-          >
-
-            <button
-              className='faq-btn'
-            >FAQ</button>
-
-          </Link>            
+           
         <Footer />
       </div>
     )
