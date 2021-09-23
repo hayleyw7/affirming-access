@@ -13,7 +13,7 @@ class App extends Component {
   };
 
   fetchRestrooms = (lat, long) => {
-    const url = `https://www.refugerestrooms.org/api/v1/restrooms/by_location?page=1&per_page=100&offset=0&lat=${lat}&lng=${long}`
+    const url = `https://www.refugerestrooms.org/api/v1/restrooms/by_location?page=1&per_page=10&offset=0&lat=${lat}&lng=${long}`
 
     fetch(url)
       .then(response => response.json())

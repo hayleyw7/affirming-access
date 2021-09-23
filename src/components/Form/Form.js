@@ -41,15 +41,20 @@ class Form extends Component {
   render() {
     return (
       <article>
+        <h3 className='find-safe'>Find safe restrooms near you.</h3>
         <form>
           <input
             type='text'
-            placeholder='Zip Code'
+            placeholder='Enter Zip Code'
             name='zip'
             // value={this.state.lat}
             onChange={event => this.handleChange(event)}
-          />      
+          />    
 
+          <article className='checkbox-container'>
+            <input type="checkbox" id="checkbox" name="checkbox" value="true" className='checkbox'></input>
+            <label for="checkbox" className='checkbox'>Gender Neutral Only?</label>           
+          </article>
           <button
             className='show-list-btn'
             onClick={event => this.handleClick(event)}

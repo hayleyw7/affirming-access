@@ -15,10 +15,10 @@
 
 .app-title {
   color: white;
-  font-size: 50px;
-  background: gray;
-  margin: 0;
-  padding: 1rem;
+  font-size: 60px;
+  background: #A56FD9;
+  margin: 0 0 0 -1rem;
+  padding: 2.5rem 1rem 2.5rem 1rem;
   min-width: 100%;
 }
 
