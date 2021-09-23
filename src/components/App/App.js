@@ -33,8 +33,11 @@ class App extends Component {
           <Form fetchRestrooms={this.fetchRestrooms} />    
         </div>      
 
-        <div className='restrooms-container'>
-          <Restrooms restrooms={this.state.restrooms}  />    
+        <div className='restrooms-page'>
+          <h2>Recommended Restrooms Near You</h2>
+          <div className='restrooms-container'>
+            <Restrooms restrooms={this.state.restrooms}  />    
+          </div>
         </div>
       </div>
     );
