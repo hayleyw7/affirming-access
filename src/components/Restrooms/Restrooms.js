@@ -28,6 +28,7 @@ const Restrooms = ({ restrooms }) => {
   return (
     <div>
       <h2>Safe Restrooms Near You</h2>
+      
       {restroomCards}
 
         <button

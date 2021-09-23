@@ -30,21 +30,35 @@ class Search extends Component {
   }
 
   handleClick = async (event) => {
+    // console.log(this.state.isGenderFreeChecked) 
     event.preventDefault();
     this.props.hideSearchPage();
     this.props.showRestroomsPage();
     let places = await this.fetchZip(this.state.zip)
-    this.props.fetchRestrooms(places[0].latitude, places[0].longitude);
+
+    const checkbox = document.querySelector(".checkbox");
+
+    if (checkbox.checked === false) {
+      console.log('no checked false')
+      this.props.fetchAllRestrooms(places[0].latitude, places[0].longitude);
     // this.clearInputs();    
+    } else {
+      console.log('yes checked true')
+      this.props.fetchGenderFreeRestrooms(places[0].latitude, places[0].longitude);
+    }
   }    
 
   // clearInputs = () => {
   //   this.setState({ lat: '', long: '' });
   // }   
 
-  genderFreeChecked = () => {
+  setGender = () => {
     this.setState({ isGenderFree: true });
-    console.log(this.state.isGenderFreeChecked) 
+  }
+
+  genderFreeChecked = () => {
+    this.setGender()
+    // console.log(this.state.isGenderFreeChecked) 
   }    
 
   render() {
@@ -69,7 +83,7 @@ class Search extends Component {
                 name="checkbox"
                 value="true"
                 className='checkbox'
-                onClick={event => this.genderFreeChecked(event)}
+                // onClick={event => this.genderFreeChecked(event)}
               >
             </input>
             <label htmlFor="checkbox" className='checkbox'>Gender Neutral Only?</label>           
