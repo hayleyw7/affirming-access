@@ -18,3 +18,11 @@
 .start-over-btn:hover {
   transform: scale(1.1); 
 }
+
+.restrooms-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: row;
+  width: 100%;
+}

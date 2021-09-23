@@ -4,7 +4,9 @@ import './Header.css';
 const Header = () => {
 
   return (
-    <h1 className='app-title'>Affirming Access</h1>
+    <div className='header-bar'>
+      <h1 className='app-title'>Affirming Access</h1>
+    </div>
   )
 }
 
