@@ -1,6 +1,6 @@
 .home-btn {
-  margin: .5rem .5rem 2rem .5rem;
-  border-radius: .25rem;
+  margin: .2rem .5rem 2rem .5rem;
+  border-radius: .8rem;
   background: white;
   color: black;
   border: 1px black solid;
@@ -8,7 +8,7 @@
     /* background: #DDDA25; */
   background: #ED998B;
   /* max-width: 12rem; */
-  padding: 1rem 3rem 1rem 3rem;
+  padding: 1rem 1.9rem 1rem 1.9rem;
   color: white;
   font-weight: bold;
   border: 0;
@@ -21,11 +21,27 @@
   width: 34rem;
   border-radius: 1rem;
   padding: 1rem 2rem 1rem 2rem;
+  background: white;
 }
 
 .question {
   font-weight: bold;
   color: #38B3B4;
+  font-size: 18px;
+}
+
+.faq-title {
+  margin: -1rem -2rem 1.8rem -2rem;
+  min-height: 6rem;
+  background-color: #38B3B4;
+  border-radius: 1rem 1rem 0 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 40px;
 }
 
 @media only screen and (max-width: 600px) {

@@ -6,18 +6,20 @@ const FAQ = () => {
 
   return (
     <div className='faq-page'>    
-      <section className='faq-card'>    
+      <section className='faq-card'>  
+
+        <h3 className='faq-title'>FAQ</h3>  
 
         <p className='question'>
-          What is Affirming Access?
+          What is this app?
         </p>
 
         <p className='answer'>
-          Affirming Access (AA) is a web application that provides safe and affirming restroom access for transgender, intersex, and gender nonconforming individuals.
+          This app, Affirming Access (AA), provides safe and affirming restroom access for transgender, intersex, and gender nonconforming individuals.
         </p>
 
         <p className='question'>
-          Where did you get this data?
+          From where's this data?
         </p>
 
         <p className='answer'>
@@ -25,7 +27,7 @@ const FAQ = () => {
         </p>        
 
         <p className='question'>
-          Why are safe and affirming restrooms important?
+          Why is this important?
         </p>
 
         <p className='answer'>

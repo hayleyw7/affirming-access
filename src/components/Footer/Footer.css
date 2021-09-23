@@ -1,0 +1,12 @@
+.footer-bar {
+  color: white;
+  /* font-size: 60px; */
+  background: #38B3B4;
+  margin: 0;
+  /* padding: 1rem 1rem -4rem 1rem; */
+  width: 98.43%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  padding: 0;
+}
