@@ -41,6 +41,7 @@ class Form extends Component {
   render() {
     return (
       <article>
+        <h3 className='find-safe'>Find safe restrooms near you.</h3>
         <form>
           <input
             type='text'
