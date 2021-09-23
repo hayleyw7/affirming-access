@@ -7,11 +7,12 @@
 
 .capitalize {
   text-transform: capitalize;
+  font-size: 1.5rem;
 }
 
 .business-name {
   margin: 0;
-  padding: .2rem;
+  padding: .2rem 2rem .2rem 2rem;
   min-height: 6rem;
   background-color: #38B3B4;
   border-radius: 1rem 1rem 0 0;
@@ -21,4 +22,17 @@
   align-items: center;
   justify-content: center;
   color: white;
+}
+
+.street {
+  margin: 2.5rem 0 0 0;
+}
+
+.city-state {
+  margin: .5rem 0 2.5rem 0;
+}
+
+.distance {
+  font-size: 1.2rem;
+  margin: 0 0 2rem 0;
 }

@@ -60,6 +60,7 @@ class Form extends Component {
             onClick={event => this.handleClick(event)}
           >Show List</button>
         </form>
+        <h4 className='euphoria'>You deserve gender euphoria.</h4>
       </article>
     )
   }  
