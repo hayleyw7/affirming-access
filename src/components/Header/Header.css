@@ -1,8 +1,19 @@
-.app-title {
+/* .app-title {
   color: white;
-  font-size: 60px;
+  font-size: 50px;
   background: #A56FD9;
   margin: 0;
-  padding: 2rem;
+  width: auto;
+}
+
+.header-bar {
+  background: black;
+  padding: 1rem;
+} */
+
+.header-bar {
+  color: white;
+  background: #A56FD9;
   width: 100%;
+  font-size: 20px;
 }
