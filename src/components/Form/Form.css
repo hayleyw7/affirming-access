@@ -1,5 +1,10 @@
 form {
   margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* flex-wrap: wrap; */
+  align-items: center;
 }
 
 input, button {
@@ -8,4 +13,25 @@ input, button {
   background: white;
   color: black;
   border: 1px black solid;
+  font-size: 20px;
+}
+
+input {
+  padding: .5rem 4rem .5rem 4rem;
+  text-align: center;
+}
+
+.show-list-btn {
+  /* background: #DDDA25; */
+  background: #ED998B;
+  /* max-width: 12rem; */
+  padding: 1rem 3rem 1rem 3rem;
+  color: white;
+  font-weight: bold;
+  border: 0;
+}
+
+.checkbox {
+  margin: 1.5rem 1rem 1.5rem 0;
+  font-size: 20px;
 }

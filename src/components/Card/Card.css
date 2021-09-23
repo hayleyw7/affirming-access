@@ -9,7 +9,7 @@
   text-transform: capitalize;
 }
 
-.business-name:first-child {
+.business-name {
   margin: 0;
   padding: .2rem;
   min-height: 6rem;
@@ -20,43 +20,5 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-
-.business-name:nth-child(2) {
-background-color: orange;  
-}
-
-.business-name:nth-child(3) {
-background-color: yellow;  
-}
-
-.business-name:nth-child(4) {
-background-color: Chartreuse;  
-}
-
-.business-name:nth-child(5) {
-background-color: cyan;  
-}
-
-.business-name:nth-child(6) {
-background-color: blue;  
-}
-
-.business-name:nth-child(7) {
-background-color: DarkOrchid;  
-}
-
-.business-name:nth-child(8) {
-background-color: DeepPink;  
-}
-
-.business-name:nth-child(9) {
-background-color: red;  
-}
-
-.business-name:last-child {
-background-color: Chartreuse;  
-  float:left;
-  border: 1px solid white;
-  clear:both;
+  color: white;
 }
