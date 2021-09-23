@@ -16,29 +16,29 @@ class App extends Component {
     }
   };
 
-  fetchAllRestrooms = (lat, long) => {
+  fetchAllRestrooms = (type, lat, long) => {
     const url = `https://www.refugerestrooms.org/api/v1/restrooms/by_location?page=1&per_page=5&offset=0&lat=${lat}&lng=${long}`
 
-    fetch(url)
-      .then(response => response.json())
-      .then(data => {
-        // console.log(data)
-        this.setState({restrooms: data})
-      })
-      .catch(error => this.setState({errorKey: error})
-    )
-  }
+    if (type === 'all') {
 
-  fetchGenderFreeRestrooms = (lat, long) => {
-    this.fetchAllRestrooms(lat, long);
+      fetch(url)
+        .then(response => response.json())
+        .then(data => {
+          this.setState({restrooms: data})
+        })
+        .catch(error => this.setState({errorKey: error})
+      )
+    } else if (type === 'genderFree') {
 
-    const allRestrooms = this.state.restrooms;
+      fetch(url)
+        .then(response => response.json())
+        .then(data => {
 
-    const result = allRestrooms.filter(element => {
-      return element.unisex === true
-    });
-
-    this.setState({restrooms: result})
+          this.setState({restrooms: data.filter(element => element.unisex === true)})
+        })
+        .catch(error => this.setState({errorKey: error})
+      )
+    }
   }
 
   hideSearchPage = (e) => {

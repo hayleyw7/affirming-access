@@ -30,7 +30,7 @@ class Search extends Component {
   }
 
   handleClick = async (event) => {
-    // console.log(this.state.isGenderFreeChecked) 
+
     event.preventDefault();
     this.props.hideSearchPage();
     this.props.showRestroomsPage();
@@ -40,25 +40,12 @@ class Search extends Component {
 
     if (checkbox.checked === false) {
       console.log('no checked false')
-      this.props.fetchAllRestrooms(places[0].latitude, places[0].longitude);
-    // this.clearInputs();    
+      this.props.fetchAllRestrooms('all', places[0].latitude, places[0].longitude);
+ 
     } else {
       console.log('yes checked true')
-      this.props.fetchGenderFreeRestrooms(places[0].latitude, places[0].longitude);
+      this.props.fetchAllRestrooms('genderFree', places[0].latitude, places[0].longitude);
     }
-  }    
-
-  // clearInputs = () => {
-  //   this.setState({ lat: '', long: '' });
-  // }   
-
-  setGender = () => {
-    this.setState({ isGenderFree: true });
-  }
-
-  genderFreeChecked = () => {
-    this.setGender()
-    // console.log(this.state.isGenderFreeChecked) 
   }    
 
   render() {
