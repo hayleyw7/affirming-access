@@ -1,0 +1,15 @@
+.home-btn {
+  margin: .5rem;
+  border-radius: .2rem;
+  background: white;
+  color: black;
+  border: 1px black solid;
+  /* font-size: 20px;   */
+  /* background: #DDDA25; */
+  background: #ED998B;
+  /* max-width: 12rem; */
+  padding: .5rem 1.5rem .5rem 1.5rem;
+  color: white;
+  font-weight: bold;
+  border: 0;
+}
