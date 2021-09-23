@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import Restrooms from '../Restrooms/Restrooms';
-import Form from '../Form/Form';
+import Search from '../Search/Search';
+import { Route } from "react-router";
 
 class App extends Component {
   constructor(props) {
@@ -18,27 +19,57 @@ class App extends Component {
     fetch(url)
       .then(response => response.json())
       .then(data => {
-        // console.log(data)
+        console.log('data from fetchRestrooms', data)
         this.setState({restrooms: data})
       })
       .catch(error => this.setState({errorKey: error})
     )
   }
 
-  render() {
+  fetchZip = (zipFromHandleClick) => {
+    const url = `https://api.zippopotam.us/us/${zipFromHandleClick}`
+
+    return fetch(url)
+      .then(response => response.json())
+      .then(data => {
+        return data.places
+      })
+      .catch(error => this.setState({errorKey: error})
+    )
+  }  
+
+  handleClick = async (zipFromLink) => {
+    let location = await this.fetchZip(zipFromLink);
+    console.log('fetchZipFunction', this.fetchZip(zipFromLink))
+    this.fetchRestrooms(location[0].latitude, location[0].longitude);
+    // this.clearInputs();
+  }
+
+  // clearInputs = () => {
+  //   this.setState({ lat: '', long: '' });
+  // }   
+
+  
+  render = () => {
     return (
       <div className="App">
-        <div className='home-page'>
-          <h1 className='app-title'>Affirming Access</h1>        
-          <Form fetchRestrooms={this.fetchRestrooms} />    
-        </div>      
+        <Route exact path='/' 
+          render={() => 
+            <div className='home-page'>
+              <h1 className='app-title'>Affirming Access</h1>        
+              <Search fetchRestrooms={this.fetchRestrooms} />    
+            </div>  
+          }
+        />    
 
-        <div className='restrooms-page'>
-          <h2>Recommended Restrooms Near You</h2>
-          <div className='restrooms-container'>
-            <Restrooms restrooms={this.state.restrooms}  />    
-          </div>
-        </div>
+        <Route exact path={'/:zip'} 
+          render={({ match }) =>
+            <div>
+              {this.handleClick(parseInt(match.params.zip))}
+              <Restrooms restrooms={this.state.restrooms} />
+            </div>
+          }
+        />
       </div>
     );
   }
