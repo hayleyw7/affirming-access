@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import './Form.css';
+import './Search.css';
+import Header from '../Header/Header';
 
-class Form extends Component {
+class Search extends Component {
   constructor( props ) {
     super();
     this.state = {
@@ -28,6 +29,8 @@ class Form extends Component {
 
   handleClick = async (event) => {
     event.preventDefault();
+    this.props.hideSearchPage();
+    this.props.showRestroomsPage();
     let places = await this.fetchZip(this.state.zip)
     console.log(places)
     this.props.fetchRestrooms(places[0].latitude, places[0].longitude);
@@ -40,9 +43,12 @@ class Form extends Component {
 
   render() {
     return (
-      <article>
-        <h3 className='find-safe'>Find safe restrooms near you.</h3>
+      <div>    
+        <Header />
+        <h3 className='find-safe'>Find Safe Restrooms Near You</h3>
+        
         <form>
+
           <input
             type='text'
             placeholder='Enter Zip Code'
@@ -53,17 +59,21 @@ class Form extends Component {
 
           <article className='checkbox-container'>
             <input type="checkbox" id="checkbox" name="checkbox" value="true" className='checkbox'></input>
-            <label for="checkbox" className='checkbox'>Gender Neutral Only?</label>           
+            <label htmlFor="checkbox" className='checkbox'>Gender Neutral Only?</label>           
           </article>
+
           <button
             className='show-list-btn'
             onClick={event => this.handleClick(event)}
           >Show List</button>
+
         </form>
+
         <h4 className='euphoria'>You deserve gender euphoria.</h4>
-      </article>
+
+      </div>
     )
   }  
 }
 
-export default Form;
+export default Search;

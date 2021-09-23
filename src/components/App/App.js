@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Restrooms from '../Restrooms/Restrooms';
-import Form from '../Form/Form';
+import Search from '../Search/Search';
 
 class App extends Component {
   constructor(props) {
@@ -25,19 +25,25 @@ class App extends Component {
     )
   }
 
+  hideSearchPage = (e) => {
+    const searchPage = document.querySelector(".search-page");
+    searchPage.classList.add("hidden");
+  }
+
+  showRestroomsPage = (e) => {
+    const restroomsPage = document.querySelector(".restrooms-page");
+    restroomsPage.classList.remove("hidden");
+  }
+
   render() {
     return (
       <div className="App">
-        <div className='home-page'>
-          <h1 className='app-title'>Affirming Access</h1>        
-          <Form fetchRestrooms={this.fetchRestrooms} />    
+        <div className='search-page'>     
+          <Search fetchRestrooms={this.fetchRestrooms} hideSearchPage={this.hideSearchPage} showRestroomsPage={this.showRestroomsPage}/>    
         </div>      
 
-        <div className='restrooms-page'>
-          <h2>Recommended Restrooms Near You</h2>
-          <div className='restrooms-container'>
-            <Restrooms restrooms={this.state.restrooms}  />    
-          </div>
+        <div className='restrooms-page hidden'>
+          <Restrooms restrooms={this.state.restrooms} />
         </div>
       </div>
     );

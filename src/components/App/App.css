@@ -9,21 +9,16 @@
   text-align: center;
 }
 
-.home-page {
+.search-page {
   width: 100%;
-}
-
-.app-title {
-  color: white;
-  font-size: 60px;
-  background: #A56FD9;
-  margin: 0 0 0 -1rem;
-  padding: 2.5rem 1rem 2.5rem 1rem;
-  min-width: 100%;
 }
 
 .restrooms-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.hidden {
+  display: none;
 }
