@@ -40,9 +40,12 @@ class Search extends Component {
 
   render() {
     return (
-      <article>
+      <div>
+        <h1 className='app-title'>Affirming Access</h1>         
         <h3 className='find-safe'>Find safe restrooms near you.</h3>
+
         <form>
+
           <input
             type='text'
             placeholder='Enter Zip Code'
@@ -53,15 +56,19 @@ class Search extends Component {
 
           <article className='checkbox-container'>
             <input type="checkbox" id="checkbox" name="checkbox" value="true" className='checkbox'></input>
-            <label for="checkbox" className='checkbox'>Gender Neutral Only?</label>           
+            <label htmlFor="checkbox" className='checkbox'>Gender Neutral Only?</label>           
           </article>
+
           <button
             className='show-list-btn'
             onClick={event => this.handleClick(event)}
           >Show List</button>
+
         </form>
+
         <h4 className='euphoria'>You deserve gender euphoria.</h4>
-      </article>
+
+      </div>
     )
   }  
 }
