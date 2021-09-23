@@ -33,13 +33,13 @@ input {
 }
 
 .checkbox {
-  margin: 1.5rem 1rem 1.5rem 0;
+  margin: .5rem .5rem 1.5rem 0;
   font-size: 15px;
 }
 
 .find-safe {
-  font-size: 15px;
-  margin: 2rem 0 -.1rem 0;
+  font-size: 20px;
+  margin: 3rem 0 -.1rem 0;
 }
 
 .euphoria {
