@@ -16,17 +16,29 @@ class App extends Component {
     }
   };
 
-  fetchRestrooms = (lat, long) => {
-    const url = `https://www.refugerestrooms.org/api/v1/restrooms/by_location?page=1&per_page=10&offset=0&lat=${lat}&lng=${long}`
+  fetchAllRestrooms = (type, lat, long) => {
+    const url = `https://www.refugerestrooms.org/api/v1/restrooms/by_location?page=1&per_page=5&offset=0&lat=${lat}&lng=${long}`
 
-    fetch(url)
-      .then(response => response.json())
-      .then(data => {
-        // console.log(data)
-        this.setState({restrooms: data})
-      })
-      .catch(error => this.setState({errorKey: error})
-    )
+    if (type === 'all') {
+
+      fetch(url)
+        .then(response => response.json())
+        .then(data => {
+          this.setState({restrooms: data})
+        })
+        .catch(error => this.setState({errorKey: error})
+      )
+    } else if (type === 'genderFree') {
+
+      fetch(url)
+        .then(response => response.json())
+        .then(data => {
+
+          this.setState({restrooms: data.filter(element => element.unisex === true)})
+        })
+        .catch(error => this.setState({errorKey: error})
+      )
+    }
   }
 
   hideSearchPage = (e) => {
@@ -47,7 +59,7 @@ class App extends Component {
           render={() => 
             <div>
               <div className='search-page'>     
-                <Search fetchRestrooms={this.fetchRestrooms} hideSearchPage={this.hideSearchPage} showRestroomsPage={this.showRestroomsPage}/>    
+                <Search fetchAllRestrooms={this.fetchAllRestrooms} fetchGenderFreeRestrooms={this.fetchGenderFreeRestrooms} hideSearchPage={this.hideSearchPage} showRestroomsPage={this.showRestroomsPage}/>    
               </div>      
 
               <div className='restrooms-page hidden'>

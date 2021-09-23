@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import './Search.css';
 import Footer from '../Footer/Footer';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 class Search extends Component {
   constructor( props ) {
     super();
     this.state = {
       zip: '',
+      isGenderFreeChecked: false,
       errorKey: ''
     }
   }
@@ -29,18 +30,23 @@ class Search extends Component {
   }
 
   handleClick = async (event) => {
+
     event.preventDefault();
     this.props.hideSearchPage();
     this.props.showRestroomsPage();
     let places = await this.fetchZip(this.state.zip)
-    console.log(places)
-    this.props.fetchRestrooms(places[0].latitude, places[0].longitude);
-    this.clearInputs();    
-  }    
 
-  clearInputs = () => {
-    this.setState({ lat: '', long: '' });
-  }       
+    const checkbox = document.querySelector(".checkbox");
+
+    if (checkbox.checked === false) {
+      console.log('no checked false')
+      this.props.fetchAllRestrooms('all', places[0].latitude, places[0].longitude);
+ 
+    } else {
+      console.log('yes checked true')
+      this.props.fetchAllRestrooms('genderFree', places[0].latitude, places[0].longitude);
+    }
+  }    
 
   render() {
     return (
@@ -58,7 +64,15 @@ class Search extends Component {
           />    
 
           <article className='checkbox-container'>
-            <input type="checkbox" id="checkbox" name="checkbox" value="true" className='checkbox'></input>
+            <input
+                type="checkbox"
+                id="checkbox"
+                name="checkbox"
+                value="true"
+                className='checkbox'
+                // onClick={event => this.genderFreeChecked(event)}
+              >
+            </input>
             <label htmlFor="checkbox" className='checkbox'>Gender Neutral Only?</label>           
           </article>
 
