@@ -26,20 +26,29 @@ class App extends Component {
     )
   }
 
-  render() {
+  
+  render = () => {
     return (
       <div className="App">
-        <div className='home-page'>
-          <h1 className='app-title'>Affirming Access</h1>        
-          <Form fetchRestrooms={this.fetchRestrooms} />    
-        </div>      
+        <Route exact path='/' 
+          render={() => 
+            <div className='home-page'>
+              <h1 className='app-title'>Affirming Access</h1>        
+              <Form fetchRestrooms={this.fetchRestrooms} />    
+            </div>  
+          }
+        />    
 
-        <div className='restrooms-page'>
-          <h2>Recommended Restrooms Near You</h2>
-          <div className='restrooms-container'>
-            <Restrooms restrooms={this.state.restrooms}  />    
-          </div>
-        </div>
+        <Route exact path='/search' 
+          render={() => 
+            <div className='restrooms-page'>
+              <h2>Recommended Restrooms Near You</h2>
+              <div className='restrooms-container'>
+                <Restrooms restrooms={this.state.restrooms}  />    
+              </div>
+            </div>
+        }
+        />
       </div>
     );
   }
