@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import './Search.css';
 import Footer from '../Footer/Footer';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 class Search extends Component {
   constructor( props ) {
     super();
     this.state = {
       zip: '',
+      isGenderFreeChecked: false,
       errorKey: ''
     }
   }
@@ -33,14 +34,18 @@ class Search extends Component {
     this.props.hideSearchPage();
     this.props.showRestroomsPage();
     let places = await this.fetchZip(this.state.zip)
-    console.log(places)
     this.props.fetchRestrooms(places[0].latitude, places[0].longitude);
-    this.clearInputs();    
+    // this.clearInputs();    
   }    
 
-  clearInputs = () => {
-    this.setState({ lat: '', long: '' });
-  }       
+  // clearInputs = () => {
+  //   this.setState({ lat: '', long: '' });
+  // }   
+
+  genderFreeChecked = () => {
+    this.setState({ isGenderFree: true });
+    console.log(this.state.isGenderFreeChecked) 
+  }    
 
   render() {
     return (
@@ -58,7 +63,15 @@ class Search extends Component {
           />    
 
           <article className='checkbox-container'>
-            <input type="checkbox" id="checkbox" name="checkbox" value="true" className='checkbox'></input>
+            <input
+                type="checkbox"
+                id="checkbox"
+                name="checkbox"
+                value="true"
+                className='checkbox'
+                onClick={event => this.genderFreeChecked(event)}
+              >
+            </input>
             <label htmlFor="checkbox" className='checkbox'>Gender Neutral Only?</label>           
           </article>
 
