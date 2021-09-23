@@ -26,6 +26,28 @@ class App extends Component {
     )
   }
 
+  fetchZip = (zip) => {
+    const url = `https://api.zippopotam.us/us/${zip}`
+
+    return fetch(url)
+      .then(response => response.json())
+      .then(data => {
+        return data.places
+      })
+      .catch(error => this.setState({errorKey: error})
+    )
+  }  
+
+  handleClick = async (zip) => {
+    let places = await this.fetchZip(zip);
+    this.fetchRestrooms(places[0].latitude, places[0].longitude);
+    // this.clearInputs();
+  }
+
+  // clearInputs = () => {
+  //   this.setState({ lat: '', long: '' });
+  // }   
+
   
   render = () => {
     return (
@@ -39,15 +61,13 @@ class App extends Component {
           }
         />    
 
-        <Route exact path='/' 
-          render={() => 
-            <div className='restrooms-page'>
-              <h2>Recommended Restrooms Near You</h2>
-              <div className='restrooms-container'>
-                <Restrooms restrooms={this.state.restrooms}  />    
-              </div>
+        <Route exact path={'/:zip'} 
+          render={({ match }) =>
+            <div>
+              {this.handleClick(parseInt(match.params.zip))}
+              <Restrooms restrooms={this.state.restrooms} />
             </div>
-        }
+          }
         />
       </div>
     );
