@@ -13,9 +13,9 @@ const Card = ({ name, street, city, state, distance }) => {
   return (
     <div className='card'>
       <h3 className='business-name capitalize'>{name}</h3>
-      <p className='capitalize'>{streetFormatted}</p>
-      <p className='capitalize'>{cityFormatted}, {stateFormatted}</p>
-      <p>{distanceFormatted} mi</p>
+      <p className='street capitalize'>{streetFormatted}</p>
+      <p className='city-state capitalize'>{cityFormatted}, {stateFormatted}</p>
+      <p className='distance'>{distanceFormatted} mi</p>
     </div>
   )
 }
