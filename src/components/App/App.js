@@ -3,6 +3,7 @@ import './App.css';
 import Restrooms from '../Restrooms/Restrooms';
 import Search from '../Search/Search';
 import Header from '../Header/Header';
+// import Footer from '../Footer/Footer';
 import FAQ from '../FAQ/FAQ';
 import { Route } from "react-router";
 
@@ -63,7 +64,6 @@ class App extends Component {
             </div>
           }
         />
-
       </div>
     );
   }
