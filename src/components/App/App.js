@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Restrooms from '../Restrooms/Restrooms';
-import Form from '../Form/Form';
+import Search from '../Search/Search';
 import { Router, Route, Switch } from "react-router";
 
 class App extends Component {
@@ -34,7 +34,7 @@ class App extends Component {
           render={() => 
             <div className='home-page'>
               <h1 className='app-title'>Affirming Access</h1>        
-              <Form fetchRestrooms={this.fetchRestrooms} />    
+              <Search fetchRestrooms={this.fetchRestrooms} />    
             </div>  
           }
         />    

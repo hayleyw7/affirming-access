@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import './Form.css';
+import './Search.css';
 
-class Form extends Component {
+class Search extends Component {
   constructor( props ) {
     super();
     this.state = {
@@ -66,4 +66,4 @@ class Form extends Component {
   }  
 }
 
-export default Form;
+export default Search;
