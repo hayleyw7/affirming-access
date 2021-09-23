@@ -1,6 +1,6 @@
 .home-btn {
   margin: .2rem .5rem 2rem .5rem;
-  border-radius: .8rem;
+  border-radius: .5rem;
   background: white;
   color: black;
   border: 1px black solid;
@@ -12,6 +12,10 @@
   color: white;
   font-weight: bold;
   border: 0;
+}
+
+.home-btn:hover {
+  transform: scale(1.1); 
 }
 
 .faq-card {

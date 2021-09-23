@@ -13,3 +13,7 @@
   font-weight: bold;
   border: 0;
 }
+
+.start-over-btn:hover {
+  transform: scale(1.1); 
+}
