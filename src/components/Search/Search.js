@@ -59,6 +59,7 @@ class Search extends Component {
             type='text'
             placeholder='Enter Zip Code'
             name='zip'
+            alt='Enter Zip Code'
             // value={this.state.lat}
             onChange={event => this.handleChange(event)}
           />    
