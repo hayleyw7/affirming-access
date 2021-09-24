@@ -75,7 +75,7 @@ class Search extends Component {
             onChange={event => this.handleChange(event)}
           />    
 
-          <h3 className='bad-zip hidden'>Please enter a valid zip code.</h3>
+          <h3 className='bad-zip hidden'>Please enter a valid US zip code.</h3>
 
           <article className='checkbox-container'>
             <input
