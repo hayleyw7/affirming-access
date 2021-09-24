@@ -1,3 +1,6 @@
+// api helper:
+// dynamic interception for both apis (only used inside respective functions)
+
 Cypress.Commands.add('interceptAPI', (fixturePage, url) => {
   cy.intercept(`${url}`, {
     // statusCode: statusCode,
@@ -6,33 +9,58 @@ Cypress.Commands.add('interceptAPI', (fixturePage, url) => {
   })
 })
 
-Cypress.Commands.add('loadRestroomsPage', (allOrGenderFree) => {
-  cy.interceptAPI(
-    'zip',
-    'https://api.zippopotam.us/us/80206'
-  )  
-    .interceptAPI(
-      `${allOrGenderFree}_restrooms`,
-      'https://www.refugerestrooms.org/api/v1/restrooms/by_location?page=1&per_page=5&offset=0&lat=${lat}&lng=${long}'
-    )
+// load search page (aka home page)
 
-    .visit('http://localhost:3000')
+Cypress.Commands.add('loadSearchPage', () => {
+  cy.visit('http://localhost:3000')
 })
 
-Cypress.Commands.add('clickShowListBtn', () => {
-  .get('button[alt="Show List Button"]')
+// load faq page
+
+Cypress.Commands.add('loadFAQPage', (allOrGenderFree) => {
+  cy.loadSearchPage()
+  .get('button[alt="FAW"]')
   .click()
 })
 
+// restrooms helper:
+// dynamic function to load one of the two restrooms pages (only used inside respective functions)
+
+Cypress.Commands.add('loadRestroomsPage', (allOrGenderFree) => {
+  cy.loadSearchPage()
+
+  .interceptAPI(
+    'zip',
+    'https://api.zippopotam.us/us/80206'
+  )  
+  .interceptAPI(
+    `${allOrGenderFree}_restrooms`,
+    'https://www.refugerestrooms.org/api/v1/restrooms/by_location?page=1&per_page=5&offset=0&lat=${lat}&lng=${long}'
+  )
+})
+
+// load respective restrooms page based on whether or not checkbox is checked
 
 Cypress.Commands.add('loadAllRestrooms', () => {
   cy.loadRestroomsPage('all')
   cy.clickShowListBtn()
-});
+})
 
 Cypress.Commands.add('loadGenderFreeRestrooms', () => {
   cy.loadRestroomsPage('gender_free')
-    .get('input[alt="Gender Free Only"]')
-      .check()
-    .clickShowListBtn()
-});
+    .clickButtonAndCheckbox()
+})
+
+// click helpers:
+// button & checkbox clicks on search page
+
+Cypress.Commands.add('clickShowListBtn', () => {
+  cy.get('button[alt="Show List Button"]')
+  .click()
+})
+
+Cypress.Commands.add('clickButtonAndCheckbox', () => {
+  cy.get('input[alt="Gender Free Only"]')
+    .check()
+  .clickShowListBtn()
+})
