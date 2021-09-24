@@ -17,7 +17,7 @@ Cypress.Commands.add('loadSearchPage', () => {
 
 // load faq page
 
-Cypress.Commands.add('loadFAQPage', (allOrGenderFree) => {
+Cypress.Commands.add('loadFAQPage', () => {
   cy.loadSearchPage()
   .get('button[alt="FAQ"]')
   .click()

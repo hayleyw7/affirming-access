@@ -32,4 +32,11 @@ describe('Search Page', () => {
       .contains('You deserve gender euphoria.')
   })
 
+  it('should go to faq page when faq button clicked', () => {
+    cy.get('button[alt="FAQ"]')
+      .click()
+    .get('p')
+      .contains('What is this app')
+  })  
+
 })
