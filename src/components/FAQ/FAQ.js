@@ -51,6 +51,7 @@ const FAQ = () => {
 
         <button
           className='home-btn'
+          alt='Find Safe Restrooms Now'
         >Find Safe Restrooms Now</button>
 
       </Link>   

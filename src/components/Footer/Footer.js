@@ -15,6 +15,7 @@ const Footer = () => {
 
         <button
           className='faq-btn'
+          alt='FAQ'
         ><h4>FAQ</h4></button>
 
       </Link> 

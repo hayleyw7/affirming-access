@@ -33,6 +33,7 @@ const Restrooms = ({ restrooms }) => {
       
         <button
           className='start-over-btn'
+          alt='Start Over'
           onClick={event => window.location.reload(event)}       
         >Start Over</button>
 

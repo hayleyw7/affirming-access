@@ -39,11 +39,9 @@ class Search extends Component {
     const checkbox = document.querySelector(".checkbox");
 
     if (checkbox.checked === false) {
-      console.log('no checked false')
       this.props.fetchAllRestrooms('all', places[0].latitude, places[0].longitude);
  
     } else {
-      console.log('yes checked true')
       this.props.fetchAllRestrooms('genderFree', places[0].latitude, places[0].longitude);
     }
   }    
@@ -59,6 +57,7 @@ class Search extends Component {
             type='text'
             placeholder='Enter Zip Code'
             name='zip'
+            alt='Enter Zip Code'
             // value={this.state.lat}
             onChange={event => this.handleChange(event)}
           />    
@@ -70,6 +69,7 @@ class Search extends Component {
                 name="checkbox"
                 value="true"
                 className='checkbox'
+                alt='Gender Free Only'
                 // onClick={event => this.genderFreeChecked(event)}
               >
             </input>
@@ -78,6 +78,7 @@ class Search extends Component {
 
           <button
             className='show-list-btn'
+            alt='Show List Button'
             onClick={event => this.handleClick(event)}
           >Show List</button>
 
