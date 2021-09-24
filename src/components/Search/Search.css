@@ -50,3 +50,8 @@ input {
 .euphoria {
   margin: 1rem 0 1rem 0;
 }
+
+.bad-zip {
+  margin-top: -.3rem;
+  color: #ED998B;
+}
