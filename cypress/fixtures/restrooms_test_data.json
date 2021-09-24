@@ -1,0 +1,50 @@
+[
+  {
+    "id": 18301,
+    "name": "Donald Duck Den",
+    "street": "2109 North Ducky Boulevard",
+    "city": "Toledo",
+    "state": "Ohio",
+    "accessible": true,
+    "unisex": false,
+    "directions": "",
+    "comment": "",
+    "latitude": 41.6741917,
+    "longitude": -83.5948238,
+    "created_at": "2015-08-08T22:07:26.096Z",
+    "updated_at": "2015-08-08T22:07:26.096Z",
+    "downvote": 0,
+    "upvote": 0,
+    "country": "US",
+    "changing_table": false,
+    "edit_id": 18301,
+    "approved": true,
+    "distance": 0.6127193937204329,
+    "bearing": "75.014129280363"
+  },
+
+  {
+    "id": 18301,
+    "name": "Gender Free Gala Space",
+    "street": "2109 North Ducky Boulevard",
+    "city": "Toledo",
+    "state": "Ohio",
+    "accessible": true,
+    "unisex": true,
+    "directions": "",
+    "comment": "",
+    "latitude": 41.6741917,
+    "longitude": -83.5948238,
+    "created_at": "2015-08-08T22:07:26.096Z",
+    "updated_at": "2015-08-08T22:07:26.096Z",
+    "downvote": 0,
+    "upvote": 0,
+    "country": "US",
+    "changing_table": false,
+    "edit_id": 18301,
+    "approved": true,
+    "distance": 0.6127193937204329,
+    "bearing": "75.014129280363"
+  }
+  
+]
