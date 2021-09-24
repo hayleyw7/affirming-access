@@ -19,10 +19,10 @@ Cypress.Commands.add('loadAllRestrooms', () => {
   cy.visit('http://localhost:3000')
 
   cy.get('input[alt="Enter Zip Code"]')
-  .type('43606')
+    .type('43606')
 
   cy.get('button[alt="Show List Button"]')
-  .click()
+    .click()
 
   cy.intercept('https://api.zippopotam.us/us/43606', {
     fixture: 'zip_test_data.json',
