@@ -3,6 +3,7 @@ import './App.css';
 import Restrooms from '../Restrooms/Restrooms';
 import Search from '../Search/Search';
 import Header from '../Header/Header';
+import Loader from '../Loader/Loader';
 // import Footer from '../Footer/Footer';
 import FAQ from '../FAQ/FAQ';
 import { Route } from "react-router";
@@ -55,15 +56,19 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
+
         <Route exact path='/' 
           render={() => 
             <div>
+
               <div className='search-page'>     
                 <Search fetchAllRestrooms={this.fetchAllRestrooms} fetchGenderFreeRestrooms={this.fetchGenderFreeRestrooms} hideSearchPage={this.hideSearchPage} showRestroomsPage={this.showRestroomsPage}/>    
               </div>      
 
               <div className='restrooms-page hidden'>
-                <Restrooms restrooms={this.state.restrooms} />
+                {!this.state.restrooms.length ? <Loader /> :
+                  <Restrooms restrooms={this.state.restrooms} />
+                }
               </div>
             </div>  
           }

@@ -88,7 +88,7 @@ class Search extends Component {
                 // onClick={event => this.genderFreeChecked(event)}
               >
             </input>
-            <label htmlFor="checkbox" className='checkbox'>Gender Neutral Only?</label>           
+            <label htmlFor="checkbox" className='checkbox-label'>Gender Neutral Only?</label>           
           </article>
 
           <button
