@@ -1,14 +1,3 @@
-// api helper:
-// dynamic interception for both apis (only used inside respective functions)
-
-Cypress.Commands.add('interceptAPI', (fixturePage, url) => {
-  cy.intercept(`${url}`, {
-    // statusCode: statusCode,
-    fixture: `${fixturePage}_test_data.json`,
-    // delay: 1000
-  })
-})
-
 // load search page (aka home page)
 
 Cypress.Commands.add('loadSearchPage', () => {
@@ -23,7 +12,7 @@ Cypress.Commands.add('loadFAQPage', () => {
   .click()
 })
 
-// load all restrooms page
+// restrooms pages
 
 Cypress.Commands.add('loadAllRestrooms', () => {
 
@@ -36,62 +25,54 @@ Cypress.Commands.add('loadAllRestrooms', () => {
   .click()
 
   cy.intercept('https://api.zippopotam.us/us/43606', {
-    fixture: `zip_test_data.json`,
+    fixture: 'zip_test_data.json',
   })
 
   cy.intercept('https://www.refugerestrooms.org/api/v1/restrooms/by_location?page=1&per_page=5&offset=0&lat=${lat}&lng=${long}', {
-    fixture: `all_restrooms_test_data.json`,
+    fixture: 'restrooms_test_data.json',
+  })  
+})
+
+Cypress.Commands.add('loadGenderFreeRestrooms', () => {
+
+  cy.visit('http://localhost:3000')
+
+  cy.get('input[alt="Enter Zip Code"]')
+  .type('43606')
+
+  cy.get('input[alt="Gender Free Only"]')
+    .check()  
+
+  cy.get('button[alt="Show List Button"]')
+  .click()
+
+  cy.intercept('https://api.zippopotam.us/us/43606', {
+    fixture: 'zip_test_data.json',
+  })
+
+  cy.intercept('https://www.refugerestrooms.org/api/v1/restrooms/by_location?page=1&per_page=5&offset=0&lat=${lat}&lng=${long}', {
+    fixture: 'restrooms_test_data.json',
   })  
 })
 
 
 
+// dynamic function drafts to use stubs working
 
+// api helper:
+// dynamic interception for both apis (only used inside respective functions)
 
-
-
-
-
-// restrooms helper:
-// dynamic function to load one of the two restrooms pages (only used inside respective functions)
-
-// Cypress.Commands.add('loadRestroomsPage', (allOrGenderFree) => {
-//   // cy.loadSearchPage()
-//   cy.interceptAPI(
-//     'zip',
-//     'https://api.zippopotam.us/us/42606'
-//   )  
-//   .interceptAPI(
-//     `${allOrGenderFree}_restrooms`,
-//     'https://www.refugerestrooms.org/api/v1/restrooms/by_location?page=1&per_page=5&offset=0&lat=${lat}&lng=${long}'
-//   )
-// })
-
-// load respective restrooms page based on whether or not checkbox is checked
-
-// Cypress.Commands.add('loadAllRestrooms', () => {
-//   // cy.loadSearchPage()
-//   cy.loadRestroomsPage('all')  
-//   cy.clickShowListBtn()
-//   .get('input[alt="Enter Zip Code"]')
-//     .type('43606')
-//   .clickShowListBtn()
+// Cypress.Commands.add('interceptAPI', (fixturePage, url) => {
+//   cy.intercept(`${url}`, {
+//     // statusCode: statusCode,
+//     fixture: `${fixturePage}_test_data.json`,
+//     // delay: 1000
+//   })
 // })
 
 
 
 
-
-
-
-
-
-
-
-// Cypress.Commands.add('loadGenderFreeRestrooms', () => {
-//   cy.loadRestroomsPage('gender_free')
-//     .clickButtonAndCheckbox()
-// })
 
 // click helpers:
 // button & checkbox clicks on search page
