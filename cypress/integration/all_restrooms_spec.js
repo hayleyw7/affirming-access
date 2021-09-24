@@ -26,8 +26,8 @@ describe('Restrooms Page - All', () => {
 
   it('should display restroom info on cards', () => {
     // cy.wait(1000)
-    // .get('h3[alt="business"]')
-    //   .contains('Center For Performing Arts')
+    cy.get('h3[alt="business"]')
+      .contains('Center For Performing Arts')
     .get('p[alt="address"]')
       .contains('1910 W Rocket Dr')
     .get('p[alt="city and state"]')
@@ -52,7 +52,7 @@ describe('Restrooms Page - All', () => {
 
   it('should make card values consistent and abbreviated', () => {
     // cy.wait(1000)
-    .get('p[alt="address"]')
+    cy.get('p[alt="address"]')
       .contains('Blvd')
     .get('p[alt="city and state"]')
       .should('not.contain', 'Ohio')
