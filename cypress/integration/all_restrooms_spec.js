@@ -17,7 +17,6 @@ describe('Restrooms Page - All', () => {
   })  
 
   it('should display restroom cards', () => {
-    // cy.wait(1000)
     cy.get('div[alt="card"]')
       .should('be.visible')
   })  
@@ -25,10 +24,7 @@ describe('Restrooms Page - All', () => {
   // delete this once stub works
 
   it('should display restroom info on cards', () => {
-    // cy.wait(1000)
-    cy.get('h3[alt="business"]')
-      .contains('Center For Performing Arts')
-    .get('p[alt="address"]')
+    cy.get('p[alt="address"]')
       .contains('1910 W Rocket Dr')
     .get('p[alt="city and state"]')
       .contains('Toledo, OH')
@@ -51,7 +47,6 @@ describe('Restrooms Page - All', () => {
   // })  
 
   it('should make card values consistent and abbreviated', () => {
-    // cy.wait(1000)
     cy.get('p[alt="address"]')
       .contains('Blvd')
     .get('p[alt="city and state"]')
@@ -63,8 +58,6 @@ describe('Restrooms Page - All', () => {
   it('should stay on this page if random elements are clicked', () => {
     cy.get('div[class="header-bar"]')
       .click()
-    .get('div[class="footer-bar"]')
-      .click()  
     .get('div[class="App"]')
       .click()    
     .get('h2')

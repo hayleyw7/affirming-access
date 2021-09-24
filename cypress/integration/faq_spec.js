@@ -37,9 +37,7 @@ describe('FAQ Page', () => {
 
   it('should stay on this page if random elements are clicked', () => {
     cy.get('div[class="header-bar"]')
-      .click()
-    .get('div[class="footer-bar"]')
-      .click()  
+      .click() 
     .get('div[class="App"]')
       .click()    
     .get('h3')
