@@ -23,28 +23,41 @@ class Search extends Component {
     return fetch(url)
       .then(response => response.json())
       .then(data => {
-        return data.places
+        return data.places[0]
       })
       .catch(error => this.setState({errorKey: error})
     )
   }
 
   handleClick = async (event) => {
-
     event.preventDefault();
-    this.props.hideSearchPage();
-    this.props.showRestroomsPage();
-    let places = await this.fetchZip(this.state.zip)
 
-    const checkbox = document.querySelector(".checkbox");
+    let location = await this.fetchZip(this.state.zip)
 
-    if (checkbox.checked === false) {
-      this.props.fetchAllRestrooms('all', places[0].latitude, places[0].longitude);
- 
-    } else {
-      this.props.fetchAllRestrooms('genderFree', places[0].latitude, places[0].longitude);
+    if (location === undefined) {
+
+      const badZipError = document.querySelector(".bad-zip");
+      badZipError.classList.remove("hidden");
+    
+    } else {      
+
+      this.props.hideSearchPage();
+      this.props.showRestroomsPage();      
+
+      const checkbox = document.querySelector(".checkbox");
+
+      if (checkbox.checked === false) {
+        this.props.fetchAllRestrooms('all', location.latitude, location.longitude);
+  
+      } else {
+        this.props.fetchAllRestrooms('genderFree', location.latitude, location.longitude);
+      }
     }
-  }    
+  }  
+
+  showBadZipError() {
+    return `<h3 className='bad-zip'>Please enter a valid zip code.</h3>`
+  }  
 
   render() {
     return (
@@ -54,13 +67,15 @@ class Search extends Component {
         <form>
 
           <input
-            type='text'
+            type='number'
             placeholder='Enter Zip Code'
             name='zip'
             alt='Enter Zip Code'
             // value={this.state.lat}
             onChange={event => this.handleChange(event)}
           />    
+
+          <h3 className='bad-zip hidden'>Please enter a valid zip code.</h3>
 
           <article className='checkbox-container'>
             <input
