@@ -1,25 +1,25 @@
 [
   {
-    "id": 39596,
-    "name": "Donald Duck's Den",
-    "street": "3422 E 12th Ave ",
-    "city": "Denver ",
-    "state": "CO",
+    "id": 18301,
+    "name": "Donald Duck Den",
+    "street": "2109 North Ducky Boulevard",
+    "city": "Toledo",
+    "state": "Ohio",
     "accessible": true,
-    "unisex": true,
+    "unisex": false,
     "directions": "",
     "comment": "",
-    "latitude": 41.6735592734114,
-    "longitude": -83.62413231210594,
-    "created_at": "2018-01-21T19:49:16.830Z",
-    "updated_at": "2018-01-21T19:49:16.830Z",
+    "latitude": 41.6741917,
+    "longitude": -83.5948238,
+    "created_at": "2015-08-08T22:07:26.096Z",
+    "updated_at": "2015-08-08T22:07:26.096Z",
     "downvote": 0,
     "upvote": 0,
     "country": "US",
     "changing_table": false,
-    "edit_id": 39596,
+    "edit_id": 18301,
     "approved": true,
-    "distance": 0.3275790686734735,
-    "bearing": "72.328577854195"
+    "distance": 0.6127193937204329,
+    "bearing": "75.014129280363"
   }
 ]
