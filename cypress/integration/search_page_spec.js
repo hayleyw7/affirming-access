@@ -39,4 +39,11 @@ describe('Search Page', () => {
       .contains('What is this app')
   })  
 
+  it('should go to restrooms page when search button clicked', () => {
+   cy.get('button[alt="Show List Button"]')
+      .click()
+    .get('button[alt="Start Over"]')
+      .should('be.visible')
+  })    
+
 })

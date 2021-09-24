@@ -1,13 +1,13 @@
 // api helper:
 // dynamic interception for both apis (only used inside respective functions)
 
-Cypress.Commands.add('interceptAPI', (fixturePage, url) => {
-  cy.intercept(`${url}`, {
-    // statusCode: statusCode,
-    fixture: `${fixturePage}_test_data.json`,
-    // delay: 1000
-  })
-})
+// Cypress.Commands.add('interceptAPI', (fixturePage, url) => {
+//   cy.intercept(`${url}`, {
+//     // statusCode: statusCode,
+//     fixture: `${fixturePage}_test_data.json`,
+//     // delay: 1000
+//   })
+// })
 
 // load search page (aka home page)
 
@@ -26,25 +26,55 @@ Cypress.Commands.add('loadFAQPage', () => {
 // restrooms helper:
 // dynamic function to load one of the two restrooms pages (only used inside respective functions)
 
-Cypress.Commands.add('loadRestroomsPage', (allOrGenderFree) => {
-  cy.loadSearchPage()
-
-  .interceptAPI(
-    'zip',
-    'https://api.zippopotam.us/us/80206'
-  )  
-  .interceptAPI(
-    `${allOrGenderFree}_restrooms`,
-    'https://www.refugerestrooms.org/api/v1/restrooms/by_location?page=1&per_page=5&offset=0&lat=${lat}&lng=${long}'
-  )
-})
+// Cypress.Commands.add('loadRestroomsPage', (allOrGenderFree) => {
+//   cy.interceptAPI(
+//     'zip',
+//     'https://api.zippopotam.us/us/42606'
+//   )  
+//   .interceptAPI(
+//     `${allOrGenderFree}_restrooms`,
+//     'https://www.refugerestrooms.org/api/v1/restrooms/by_location?page=1&per_page=5&offset=0&lat=${lat}&lng=${long}'
+//   )
+// })
 
 // load respective restrooms page based on whether or not checkbox is checked
 
+// Cypress.Commands.add('loadAllRestrooms', () => {
+//   cy.loadSearchPage()
+//   cy.clickShowListBtn()
+//   cy.loadRestroomsPage('all')
+// })
+
+
+
+
+
+
+
 Cypress.Commands.add('loadAllRestrooms', () => {
-  cy.loadRestroomsPage('all')
-  cy.clickShowListBtn()
+
+  cy.intercept('https://api.zippopotam.us/us/43606', {
+    fixture: `zip_test_data.json`,
+  })
+
+    cy.wait(5000)  
+
+  .intercept('https://www.refugerestrooms.org/api/v1/restrooms/by_location?page=1&per_page=5&offset=0&lat=${lat}&lng=${long}', {
+    fixture: `all_restrooms_test_data.json`,
+  })  
+
+    cy.wait(5000)    
+
+    .visit('http://localhost:3000')
+
+    cy.wait(5000)      
+
+    .get('button[alt="Show List Button"]')
+    .click()
+
 })
+
+
 
 Cypress.Commands.add('loadGenderFreeRestrooms', () => {
   cy.loadRestroomsPage('gender_free')

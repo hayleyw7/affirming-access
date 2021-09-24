@@ -39,11 +39,9 @@ class Search extends Component {
     const checkbox = document.querySelector(".checkbox");
 
     if (checkbox.checked === false) {
-      console.log('no checked false')
       this.props.fetchAllRestrooms('all', places[0].latitude, places[0].longitude);
  
     } else {
-      console.log('yes checked true')
       this.props.fetchAllRestrooms('genderFree', places[0].latitude, places[0].longitude);
     }
   }    
