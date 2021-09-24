@@ -70,6 +70,7 @@ class Search extends Component {
                 name="checkbox"
                 value="true"
                 className='checkbox'
+                alt='Gender Free Only'
                 // onClick={event => this.genderFreeChecked(event)}
               >
             </input>
@@ -78,6 +79,7 @@ class Search extends Component {
 
           <button
             className='show-list-btn'
+            alt='Show List Button'
             onClick={event => this.handleClick(event)}
           >Show List</button>
 
