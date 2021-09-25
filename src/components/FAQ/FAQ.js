@@ -15,16 +15,8 @@ const FAQ = () => {
         </p>
 
         <p className='answer'>
-          This app, Affirming Access (AA), provides safe and affirming restroom access for transgender, intersex, and gender nonconforming individuals.
-        </p>
-
-        <p className='question'>
-          From where's this data?
-        </p>
-
-        <p className='answer'>
-          All of this data is updating every search through an open-source API created by <a href={"https://www.refugerestrooms.org/"}>Refuge Restrooms (RR)</a>. Their first 4500 entries were added from the Safe2Pee database, and the list is now kept updated by RR volunteers. If you know of a safe or gender-neutral restroom, please add it to their database, and the changes will also be on AA once approved by RR.
-        </p>        
+          <b>Affirming Access</b> provides safe and affirming restroom access for transgender, intersex, and gender nonconforming individuals.
+        </p>     
 
         <p className='question'>
           Why is this important?
@@ -33,14 +25,22 @@ const FAQ = () => {
         <p className='answer'>
           According to respondents of the <a href={"https://www.ustranssurvey.org/"}>US Transgender Survey</a>:
           <ul>
-            <li>59% avoided using a restroom for fear of confrontation</li>
-            <li>31% avoided eating/drinking to avoid restrooms</li>
-            <li>24% had their presence in the restroom questioned</li>
-            <li>12% had been harassed, attacked, or sexually assaulted in a restroom</li>
-            <li>9% had been denied restroom access</li>
-            <li>8% developed a kidney issue or UTI from avoiding restrooms</li>
+            <li><b>59%</b> avoided using a restroom for fear of confrontation</li>
+            <li><b>31%</b> avoided eating/drinking to avoid restrooms</li>
+            <li><b>24%</b> had their presence in the restroom questioned</li>
+            <li><b>12%</b> were harassed, attacked, or sexually assaulted in a restroom</li>
+            <li><b>9%</b> were denied restroom access</li>
+            <li><b>8%</b> developed a kidney issue or UTI from avoiding restrooms</li>
           </ul>
-        </p>      
+        </p>  
+
+        <p className='question'>
+          Where did you get this data?
+        </p>
+
+        <p className='answer'>
+          All of this data is pulled from the <a href={"https://www.refugerestrooms.org/"}>Refuge Restrooms</a> database, which is kept updated by volunteers. If you know of a safe or gender-neutral restroom, please add it to their database. Approved submissions will also be reflected on <b>Affirming Access</b>.
+        </p>               
 
       </section>
 
