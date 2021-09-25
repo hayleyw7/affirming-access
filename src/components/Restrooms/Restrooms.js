@@ -25,18 +25,9 @@ const Restrooms = ({ restrooms }) => {
 
   return (
     <div>
-      <h2>Safe Restrooms Near You</h2>
-
       <div className='restrooms-container'>    
         {restroomCards}
       </div>
-      
-        <button
-          className='start-over-btn'
-          alt='Start Over'
-          onClick={event => window.location.reload(event)}       
-        >Start Over</button>
-
     </div>
   )  
 }

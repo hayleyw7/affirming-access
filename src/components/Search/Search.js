@@ -14,7 +14,9 @@ class Search extends Component {
   }
 
   handleChange = event => {
+    
     this.setState({ [event.target.name]: event.target.value });
+    // this.setValue(event.target.value);
   } 
 
   fetchZip = (zip) => {
@@ -41,8 +43,7 @@ class Search extends Component {
     
     } else {      
 
-      this.props.hideSearchPage();
-      this.props.showRestroomsPage();      
+      this.props.changeLayout();      
 
       const checkbox = document.querySelector(".checkbox");
 
@@ -53,6 +54,10 @@ class Search extends Component {
         this.props.fetchAllRestrooms('genderFree', location.latitude, location.longitude);
       }
     }
+
+    this.setState({ [event.target.name]: '' });
+    
+    // document.querySelector(".zip-input").reset()
   }  
 
   showBadZipError() {
@@ -62,7 +67,7 @@ class Search extends Component {
   render() {
     return (
       <div>    
-        <h3 className='find-safe'>Find Safe Restrooms Near You</h3>
+        <p className='find-safe'>Find Safe Restrooms Near You</p>
         
         <form>
 
@@ -71,8 +76,10 @@ class Search extends Component {
             placeholder='Enter Zip Code'
             name='zip'
             alt='Enter Zip Code'
+            className='zip-input'
             // value={this.state.lat}
             onChange={event => this.handleChange(event)}
+            // value=''
           />    
 
           <h3 className='bad-zip hidden'>Please enter a valid US zip code.</h3>
@@ -95,7 +102,7 @@ class Search extends Component {
             className='show-list-btn'
             alt='Show List Button'
             onClick={event => this.handleClick(event)}
-          >Show List</button>
+          >Search Now</button>
 
         </form>
            

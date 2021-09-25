@@ -17,14 +17,21 @@ input,
   font-size: 20px;
 }
 
-input {
+checkbox {
   padding: .5rem 1.5rem .5rem 1.5rem;
+  text-align: center;
+}
+
+.zip-input {
+  width: 15rem;  
+  height: 2.5rem;
+  padding-left: 1rem;
   text-align: center;
 }
 
 .show-list-btn {
   /* background: #DDDA25; */
-  background: #ED998B;
+  background: #c98175;
   /* max-width: 12rem; */
   padding: 1rem 3rem 1rem 3rem;
   color: white;
@@ -45,6 +52,7 @@ input {
 .find-safe {
   font-size: 20px;
   margin: 3rem 0 -.1rem 0;
+  font-weight: bold;
 }
 
 .euphoria {

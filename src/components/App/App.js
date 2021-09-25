@@ -42,14 +42,9 @@ class App extends Component {
     }
   }
 
-  hideSearchPage = (e) => {
-    const searchPage = document.querySelector(".search-page");
-    searchPage.classList.add("hidden");
-  }
-
-  showRestroomsPage = (e) => {
-    const restroomsPage = document.querySelector(".restrooms-page");
-    restroomsPage.classList.remove("hidden");
+  changeLayout = (e) => {
+    document.querySelector(".restrooms-page").classList.remove("hidden");
+    document.querySelector(".footer-bar").classList.add("hidden");
   }
 
   render() {
@@ -62,7 +57,7 @@ class App extends Component {
             <div>
 
               <div className='search-page'>     
-                <Search fetchAllRestrooms={this.fetchAllRestrooms} fetchGenderFreeRestrooms={this.fetchGenderFreeRestrooms} hideSearchPage={this.hideSearchPage} showRestroomsPage={this.showRestroomsPage}/>    
+                <Search fetchAllRestrooms={this.fetchAllRestrooms} fetchGenderFreeRestrooms={this.fetchGenderFreeRestrooms} changeLayout={this.changeLayout}/>    
               </div>      
 
               <div className='restrooms-page hidden'>

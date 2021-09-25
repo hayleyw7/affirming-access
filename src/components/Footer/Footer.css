@@ -1,6 +1,6 @@
 .footer-bar {
   color: white;
-  background: #38B3B4;
+  background: #287d7d;
   position: fixed;
   left: 0;
   bottom: 0;
@@ -14,6 +14,7 @@
 .euphoria {
   /* border: 1px black solid; */
   margin-top: 1.6rem;
+  font-weight: bold;
 }
 
 .faq-btn {
@@ -34,10 +35,19 @@
   animation: none;
 }
 
+.faq-text {
+  font-weight: bold;
+  margin-top: 1.4rem;
+}
+
 @keyframes wiggle {
     0% { transform: rotate(0deg); }
    80% { transform: rotate(0deg); }
    85% { transform: rotate(15deg); }
    95% { transform: rotate(-15deg); }
   100% { transform: rotate(0deg); }
+}
+
+.hidden {
+  display: none;
 }
