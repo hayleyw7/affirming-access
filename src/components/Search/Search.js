@@ -41,8 +41,7 @@ class Search extends Component {
     
     } else {      
 
-      this.props.hideSearchPage();
-      this.props.showRestroomsPage();      
+      this.props.changeLayout();      
 
       const checkbox = document.querySelector(".checkbox");
 
@@ -95,7 +94,7 @@ class Search extends Component {
             className='show-list-btn'
             alt='Show List Button'
             onClick={event => this.handleClick(event)}
-          >Show List</button>
+          >Search Now</button>
 
         </form>
            
