@@ -14,7 +14,9 @@ class Search extends Component {
   }
 
   handleChange = event => {
+    
     this.setState({ [event.target.name]: event.target.value });
+    // this.setValue(event.target.value);
   } 
 
   fetchZip = (zip) => {
@@ -52,6 +54,10 @@ class Search extends Component {
         this.props.fetchAllRestrooms('genderFree', location.latitude, location.longitude);
       }
     }
+
+    this.setState({ [event.target.name]: '' });
+    
+    // document.querySelector(".zip-input").reset()
   }  
 
   showBadZipError() {
@@ -73,6 +79,7 @@ class Search extends Component {
             className='zip-input'
             // value={this.state.lat}
             onChange={event => this.handleChange(event)}
+            // value=''
           />    
 
           <h3 className='bad-zip hidden'>Please enter a valid US zip code.</h3>
