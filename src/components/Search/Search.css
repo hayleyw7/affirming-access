@@ -17,8 +17,15 @@ input,
   font-size: 20px;
 }
 
-input {
+checkbox {
   padding: .5rem 1.5rem .5rem 1.5rem;
+  text-align: center;
+}
+
+.zip-input {
+  width: 15rem;  
+  height: 2.5rem;
+  padding-left: 1rem;
   text-align: center;
 }
 
