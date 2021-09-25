@@ -55,13 +55,8 @@ class Search extends Component {
       }
     }
 
-    // const zipInput = document.querySelector(".zip-input")
-
-    // zipInput.value.clear()
-
     this.setState({ zip: '' });
     
-    // document.querySelector(".zip-input").reset()
   }  
 
   showBadZipError() {
