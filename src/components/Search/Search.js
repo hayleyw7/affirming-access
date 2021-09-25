@@ -62,7 +62,7 @@ class Search extends Component {
   render() {
     return (
       <div>    
-        <h3 className='find-safe'>Find Safe Restrooms Near You</h3>
+        <p className='find-safe'>Find Safe Restrooms Near You</p>
         
         <form>
 

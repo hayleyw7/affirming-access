@@ -14,6 +14,7 @@
 .euphoria {
   /* border: 1px black solid; */
   margin-top: 1.6rem;
+  font-weight: bold;
 }
 
 .faq-btn {
@@ -32,6 +33,11 @@
 .faq-btn:hover {
   color: #DCDCDC;
   animation: none;
+}
+
+.faq-text {
+  font-weight: bold;
+  margin-top: 1.4rem;
 }
 
 @keyframes wiggle {

@@ -45,6 +45,7 @@ input {
 .find-safe {
   font-size: 20px;
   margin: 3rem 0 -.1rem 0;
+  font-weight: bold;
 }
 
 .euphoria {

@@ -6,7 +6,7 @@ const Footer = () => {
 
   return (
     <div className='footer-bar'>
-      <h4 className='euphoria'>You deserve gender euphoria.</h4>
+      <p className='euphoria'>You deserve gender euphoria.</p>
       
       <Link
         to={'/faq'}
@@ -16,7 +16,7 @@ const Footer = () => {
         <button
           className='faq-btn'
           alt='FAQ'
-        ><h4>FAQ</h4></button>
+        ><p className='faq-text'>FAQ</p></button>
 
       </Link> 
 
