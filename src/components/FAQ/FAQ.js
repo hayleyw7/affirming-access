@@ -15,11 +15,11 @@ const FAQ = () => {
         </p>
 
         <p className='answer'>
-          This app, Affirming Access (AA), provides safe and affirming restroom access for transgender, intersex, and gender nonconforming individuals.
+          Affirming Access (AA) provides safe and affirming restroom access for transgender, intersex, and gender nonconforming individuals.
         </p>
 
         <p className='question'>
-          From where's this data?
+          Where did you get this data?
         </p>
 
         <p className='answer'>
@@ -33,12 +33,12 @@ const FAQ = () => {
         <p className='answer'>
           According to respondents of the <a href={"https://www.ustranssurvey.org/"}>US Transgender Survey</a>:
           <ul>
-            <li>59% avoided using a restroom for fear of confrontation</li>
-            <li>31% avoided eating/drinking to avoid restrooms</li>
-            <li>24% had their presence in the restroom questioned</li>
-            <li>12% had been harassed, attacked, or sexually assaulted in a restroom</li>
-            <li>9% had been denied restroom access</li>
-            <li>8% developed a kidney issue or UTI from avoiding restrooms</li>
+            <li><b>59%</b> avoided using a restroom for fear of confrontation</li>
+            <li><b>31%</b> avoided eating/drinking to avoid restrooms</li>
+            <li><b>24%</b> had their presence in the restroom questioned</li>
+            <li><b>12%</b> were harassed, attacked, or sexually assaulted in a restroom</li>
+            <li><b>9%</b> were denied restroom access</li>
+            <li><b>8%</b> developed a kidney issue or UTI from avoiding restrooms</li>
           </ul>
         </p>      
 
