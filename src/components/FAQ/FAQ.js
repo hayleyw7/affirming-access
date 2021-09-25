@@ -22,7 +22,7 @@ const FAQ = () => {
           Why is this important?
         </p>
 
-        <p className='answer'>
+        <section className='answer'>
           According to respondents of the <a href={"https://www.ustranssurvey.org/"}>US Transgender Survey</a>:
           <ul>
             <li><b>59%</b> avoided using a restroom for fear of confrontation</li>
@@ -32,7 +32,7 @@ const FAQ = () => {
             <li><b>9%</b> were denied restroom access</li>
             <li><b>8%</b> developed a kidney issue or UTI from avoiding restrooms</li>
           </ul>
-        </p>  
+        </section>  
 
         <p className='question'>
           Where did you get this data?
