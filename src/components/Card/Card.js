@@ -4,8 +4,12 @@ var normalize = require('us-states-normalize');
 
 const Card = ({ name, street, city, state, distance, id }) => {
 
-  const streetFormatted = street.split('North ').join('N ').split('north ').join('N ').split('South ').join('S ').split('south ').join('S ').split('East ').join('E ').split('east ').join('E ').split('West ').join('W ').split('west ').join('W ').split('treet').join('t').split('and').join('&').split('venue').join('ve').split(' road').join(' Rd').split(' Road').join(' Rd').split('oulevard').join('lvd').split('rive').join('r').split('door').join('Dr').split('Door').join('Dr').split('arkway').join('kwy').split('.').join('')
-  
+  const streetAbbrevDirection = street.toLowerCase().split('north ').join('N ').split('south ').join('S ').split('east ').join('E ').split('west ').join('W ')
+
+  const streetAbbrevTypes = streetAbbrevDirection.split('treet').join('t').split('venue').join('ve').split(' road').join(' Rd').split('oulevard').join('lvd').split('rive').join('r').split('door').join('Dr').split('arkway').join('kwy')
+
+  const streetFormatted = streetAbbrevTypes.split('and').join('&').split('.').join('')
+
   const cityFormatted = city.split(' ').join('');
   const stateFormatted = normalize(state);
   const distanceFormatted = distance.toFixed(2);
