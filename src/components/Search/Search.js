@@ -55,9 +55,8 @@ class Search extends Component {
       }
     }
 
-    this.setState({ [event.target.name]: '' });
+    this.setState({ zip: '' });
     
-    // document.querySelector(".zip-input").reset()
   }  
 
   showBadZipError() {
@@ -77,9 +76,8 @@ class Search extends Component {
             name='zip'
             alt='Enter Zip Code'
             className='zip-input'
-            // value={this.state.lat}
+            value={this.state.zip}
             onChange={event => this.handleChange(event)}
-            // value=''
           />    
 
           <h3 className='bad-zip hidden'>Please enter a valid US zip code.</h3>
