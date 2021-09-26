@@ -8,6 +8,7 @@ import { getRestrooms } from '../../utilities/apiCalls';
 // import Footer from '../Footer/Footer';
 import FAQ from '../FAQ/FAQ';
 import { Route } from "react-router";
+import { cleanRestroomsData } from '../../utilities/dataCleaning';
 
 class App extends Component {
   constructor(props) {
@@ -27,6 +28,7 @@ class App extends Component {
     if (type === 'all') {
 
       getRestrooms(lat, long)
+        .then(data => cleanRestroomsData(data))
         .then(data => {this.setState({restrooms: data})})
         .catch(catchAction)
       
