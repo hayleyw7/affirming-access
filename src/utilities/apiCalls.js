@@ -4,3 +4,16 @@ export const getRestrooms = (lat, long) => {
   return fetch(url)
     .then(response => response.json())
 }
+
+// export const getZip = async (zip) => {
+//   const url = `https://api.zippopotam.us/us/${zip}`
+
+//   return fetch(url)
+//     .then(response => response.json())
+//     .then(data => {
+//       return data.places[0]
+//     })
+// }
+
+
+

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './Search.css';
 import Footer from '../Footer/Footer';
+// import { getZip } from '../../utilities/apiCalls';
 // import { Link } from 'react-router-dom';
 
 class Search extends Component {
