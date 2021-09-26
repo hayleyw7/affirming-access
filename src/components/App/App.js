@@ -37,7 +37,7 @@ class App extends Component {
         .then(data => {
           this.setState({ 
             restrooms: data.filter(
-              element => element.unisex === true
+              restroom => restroom.unisex === true
             )
           })
         })
@@ -65,7 +65,7 @@ class App extends Component {
 
               <div className='restrooms-page hidden'>
                 {
-                  this.state.errorKey ? <Error /> :
+                  this.state.errorKey === 'error' ? <Error /> :
                   !this.state.restrooms.length ? <Loader /> :
                   <Restrooms restrooms={this.state.restrooms} />
                 }
