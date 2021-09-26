@@ -4,6 +4,7 @@ import Restrooms from '../Restrooms/Restrooms';
 import Search from '../Search/Search';
 import Header from '../Header/Header';
 import Loader from '../Loader/Loader';
+import { getRestrooms } from '../../utilities/apiCalls';
 // import Footer from '../Footer/Footer';
 import FAQ from '../FAQ/FAQ';
 import { Route } from "react-router";
@@ -17,27 +18,27 @@ class App extends Component {
     }
   };
 
-  fetchAllRestrooms = (type, lat, long) => {
-    const url = `https://www.refugerestrooms.org/api/v1/restrooms/by_location?page=1&per_page=5&offset=0&lat=${lat}&lng=${long}`
+  fetchRestrooms = (type, lat, long) => {
 
     this.setState({ restrooms: [] })
 
-    const responseAction = response => response.json()
     const catchAction = error => this.setState({errorKey: error})
 
     if (type === 'all') {
 
-      fetch(url)
-        .then(responseAction)
+      getRestrooms(lat, long)
         .then(data => {this.setState({restrooms: data})})
         .catch(catchAction)
       
     } else if (type === 'genderFree') {
       
-      fetch(url)
-        .then(responseAction)
+      getRestrooms(lat, long)
         .then(data => {
-          this.setState({restrooms: data.filter(element => element.unisex === true)})
+          this.setState({ 
+            restrooms: data.filter(
+              element => element.unisex === true
+            )
+          })
         })
         .catch(catchAction)
     }
@@ -58,7 +59,7 @@ class App extends Component {
             <div>
 
               <div className='search-page'>     
-                <Search fetchAllRestrooms={this.fetchAllRestrooms} fetchGenderFreeRestrooms={this.fetchGenderFreeRestrooms} changeLayout={this.changeLayout}/>    
+                <Search fetchRestrooms={this.fetchRestrooms} changeLayout={this.changeLayout}/>    
               </div>      
 
               <div className='restrooms-page hidden'>
