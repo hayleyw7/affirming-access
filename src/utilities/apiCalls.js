@@ -14,9 +14,6 @@ export const fetchZip = (zip) => {
   return fetch(url)
     .then(response => response.json())
     .then(data => cleanZipData(data))
-    // .then(data => {
-    //   return data.places[0]
-    // })
 }
 
 export const setErrorStatus = () => {

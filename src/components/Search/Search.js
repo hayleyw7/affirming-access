@@ -8,14 +8,13 @@ class Search extends Component {
     super();
     this.state = {
       zip: '',
-      isGenderFreeChecked: false,
       errorKey: ''
     }
   }
 
   handleChange = (event) => {
     this.setState({ [event.target.name]: event.target.value });
-  } 
+  }
 
   handleClick = async (event) => {
     event.preventDefault();
@@ -25,13 +24,13 @@ class Search extends Component {
     )
 
     if (location === undefined) {
+      
+      document.querySelector(".bad-zip").classList.remove("hidden");
+      document.querySelector(".restrooms-page").classList.add("hidden");
 
-      const badZipError = document.querySelector(".bad-zip");
-      badZipError.classList.remove("hidden");
-    
     } else {
 
-      this.props.changeLayout();      
+      this.props.showRestrooms();      
 
       const checkbox = document.querySelector(".checkbox");
 
@@ -42,7 +41,9 @@ class Search extends Component {
         this.props.fetchRestrooms('genderFree', location.latitude, location.longitude);
       }
     }
+
     this.setState({ zip: '' });
+    document.querySelector(".checkbox").checked = false;
   }  
 
   render() {

@@ -10,7 +10,7 @@ import FAQ from '../FAQ/FAQ';
 import { Route } from "react-router";
 
 class App extends Component {
-  constructor(props) {
+  constructor() {
     super();
     this.state = {
       restrooms: [],
@@ -44,7 +44,7 @@ class App extends Component {
     }
   }
 
-  changeLayout = (e) => {
+  showRestrooms = (e) => {
     document.querySelector(".restrooms-page").classList.remove("hidden");
     document.querySelector(".footer-bar").classList.add("hidden");
   }
@@ -59,7 +59,7 @@ class App extends Component {
             <div>
 
               <div className='search-page'>     
-                <Search fetchRestrooms={this.fetchRestrooms} changeLayout={this.changeLayout}/>    
+                <Search fetchRestrooms={this.fetchRestrooms} showRestrooms={this.showRestrooms}/>    
               </div>      
 
               <div className='restrooms-page hidden'>
