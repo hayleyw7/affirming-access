@@ -17,12 +17,9 @@ export const cleanRestroomsData = (data) => {
   })
 }
 
-// export const cleanZipData = (data) => {
-//   return data.movies.map(movie => {
-//     return {
-//       id: movie.id, 
-//       poster_path: movie.poster_path, 
-//       title: movie.title
-//     }
-//   })
-// }
+export const cleanZipData = (data) => {
+    return {
+      latitude: data.places[0].latitude,
+      longitude: data.places[0].longitude
+    }
+}
