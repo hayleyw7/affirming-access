@@ -15,4 +15,6 @@ export const fetchZip = (zip) => {
     })
 }
 
-
+export const setErrorStatus = () => {
+  return error => this.setState({errorKey: error})
+}

@@ -23,14 +23,14 @@ class App extends Component {
 
     this.setState({ restrooms: [] })
 
-    const catchAction = error => this.setState({errorKey: error})
+    const setErrorStatus = error => this.setState({errorKey: error})
 
     if (type === 'all') {
 
       getRestrooms(lat, long)
         .then(data => cleanRestroomsData(data))
         .then(data => {this.setState({restrooms: data})})
-        .catch(catchAction)
+        .catch(setErrorStatus)
       
     } else if (type === 'genderFree') {
       
@@ -42,7 +42,7 @@ class App extends Component {
             )
           })
         })
-        .catch(catchAction)
+        .catch(setErrorStatus)
     }
   }
 

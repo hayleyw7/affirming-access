@@ -20,9 +20,7 @@ class Search extends Component {
   handleClick = async (event) => {
     event.preventDefault();
 
-    let location = await fetchZip(this.state.zip).catch(
-      error => this.setState({errorKey: error})
-    )
+    let location = await fetchZip(this.state.zip).catch(error => this.setState({errorKey: error}))
 
     if (location === undefined) {
 
