@@ -7,6 +7,7 @@ import Restrooms from '../Restrooms/Restrooms';
 import Search from '../Search/Search';
 import Header from '../Header/Header';
 import Loader from '../Loader/Loader';
+import Error from '../Error/Error';
 import FAQ from '../FAQ/FAQ';
 
 class App extends Component {
@@ -58,12 +59,14 @@ class App extends Component {
           render={() => 
             <div>
 
-              <div className='search-page'>     
+              <div className='search-page'>
                 <Search fetchRestrooms={this.fetchRestrooms} showRestrooms={this.showRestrooms}/>    
               </div>      
 
               <div className='restrooms-page hidden'>
-                {!this.state.restrooms.length ? <Loader /> :
+                {
+                  this.state.errorKey ? <Error /> :
+                  !this.state.restrooms.length ? <Loader /> :
                   <Restrooms restrooms={this.state.restrooms} />
                 }
               </div>
