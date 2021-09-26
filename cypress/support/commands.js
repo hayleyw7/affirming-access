@@ -1,4 +1,4 @@
-// HELPER FUNCTIONS
+/////////// HELPER FUNCTIONS /////////// 
 
 // dynamic stubbing
 
@@ -8,32 +8,25 @@ Cypress.Commands.add('interceptAPI', (fixturePage, url) => {
   })
 })
 
-// Cypress.Commands.add('stubAll', () => {
-//   cy.interceptAPI('zip', 'https://api.zippopotam.us/us/43606')
-//   cy.interceptAPI('restrooms', `https://www.refugerestrooms.org/api/v1/restrooms/by_location?page=1&per_page=5&offset=0&lat=${lat}&lng=${long}`)
-// })
-
-// actions on search page
-
-Cypress.Commands.add('enterZipOnLoad', () => {
-  cy.loadSearchPage()
-  cy.get('input[alt="Enter Zip Code"]').type('43606')
-})
-
-Cypress.Commands.add('stubAtSearch', () => {
-  cy.get('button[alt="Show List Button"]').click()
-    
+Cypress.Commands.add('stubOnSearch', (lat, long) => {
+  cy.get('button[alt="Show List Button"]')
+    .click()
   cy.interceptAPI('zip', 'https://api.zippopotam.us/us/43606')
   cy.interceptAPI('restrooms', `https://www.refugerestrooms.org/api/v1/restrooms/by_location?page=1&per_page=5&offset=0&lat=${lat}&lng=${long}`)
 })
 
-// PAGE LOAD FUNCTIONS
+/////////// PAGE LOAD FUNCTIONS /////////// 
 
-// load search page
+// load search page & enter zip
 
 Cypress.Commands.add('loadSearchPage', () => {
-  cy.loadSearchPage()
   cy.visit('http://localhost:3000')
+})
+
+Cypress.Commands.add('enterZipOnLoad', () => {
+  cy.loadSearchPage()
+  cy.get('input[alt="Enter Zip Code"]')
+    .type('43606')
 })
 
 // load faq page
@@ -47,11 +40,11 @@ Cypress.Commands.add('loadFAQPage', () => {
 
 Cypress.Commands.add('loadAllRestrooms', (lat, long) => {
   cy.enterZipOnLoad()
-  cy.stubAtSearch()
+  cy.stubOnSearch(lat, long)
 })
 
 Cypress.Commands.add('loadGenderFreeRestrooms', (lat, long) => {
   cy.enterZipOnLoad()
   cy.get('input[alt="Gender Free Only"]').check()  
-  cy.stubAtSearch()
+  cy.stubOnSearch(lat, long)
 })
