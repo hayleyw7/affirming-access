@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './Search.css';
 import Footer from '../Footer/Footer';
-import { fetchZip } from '../../utilities/apiCalls';
+import { fetchZip, setError } from '../../utilities/apiCalls';
 
 class Search extends Component {
   constructor( props ) {
@@ -20,18 +20,18 @@ class Search extends Component {
   handleClick = async (event) => {
     event.preventDefault();
 
-    let location = await fetchZip(this.state.zip).catch(
-      error => this.setState({errorKey: error})
-    )
+    let location = await fetchZip(this.state.zip).then(data => {
+      return data.places[0]
+    })
 
-    if (location === undefined) {
+    if (location === undefined || this.state.zip === undefined) {
 
       const badZipError = document.querySelector(".bad-zip");
       badZipError.classList.remove("hidden");
     
     } else {
 
-      this.props.changeLayout();      
+      this.props.displayRestrooms();      
 
       const checkbox = document.querySelector(".checkbox");
 
