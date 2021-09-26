@@ -8,14 +8,6 @@ describe('Restrooms Page - All', () => {
     cy.url().should('eq', 'http://localhost:3000/')
   })
 
-  it('should display restrooms page', () => {
-    // cy.wait(5000)
-    cy.get('h2')
-      .contains('Safe Restrooms Near You')
-    .get('button[alt="Start Over"]')
-      .should('be.visible')
-  })  
-
   it('should display restroom cards', () => {
     cy.get('div[alt="card"]')
       .should('be.visible')
@@ -24,9 +16,7 @@ describe('Restrooms Page - All', () => {
   // delete this once stub works
 
   it('should display restroom info on cards', () => {
-    cy.get('p[alt="address"]')
-      .contains('1910 W Rocket Dr')
-    .get('p[alt="city and state"]')
+    cy.get('p[alt="city and state"]')
       .contains('Toledo, OH')
     .get('p[alt="miles away"]')
       .contains('1.07 mi')
@@ -47,9 +37,7 @@ describe('Restrooms Page - All', () => {
   // })  
 
   it('should make card values consistent and abbreviated', () => {
-    cy.get('p[alt="address"]')
-      .contains('Blvd')
-    .get('p[alt="city and state"]')
+    cy.get('p[alt="city and state"]')
       .should('not.contain', 'Ohio')
     .get('p[alt="miles away"]')
       .should('not.contain', 'miles')
@@ -60,8 +48,6 @@ describe('Restrooms Page - All', () => {
       .click()
     .get('div[class="App"]')
       .click()    
-    .get('h2')
-      .contains('Safe Restrooms Near You')
   });      
 
 })
