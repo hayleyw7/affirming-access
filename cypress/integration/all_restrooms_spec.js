@@ -1,7 +1,7 @@
 describe('Restrooms Page - All', () => {
 
   beforeEach(() => {
-    cy.loadAllRestrooms()
+    cy.loadAllRestrooms(41.6712, -83.606)
   })
 
   it('should keep original url', () => {
@@ -15,26 +15,24 @@ describe('Restrooms Page - All', () => {
 
   // delete this once stub works
 
-  it('should display restroom info on cards', () => {
-    cy.get('p[alt="city and state"]')
-      .contains('Toledo, OH')
-    .get('p[alt="miles away"]')
-      .contains('1.07 mi')
-  })    
+  // it('should display restroom info on cards', () => {
+  //   cy.get('p[alt="city and state"]')
+  //     .contains('Toledo, OH')
+  //   .get('p[alt="miles away"]')
+  //     .contains('1.07 mi')
+  // })    
 
   // uncomment this once stub works
 
-  // it('should display restroom info on cards', () => {
-  //   cy.wait(1000)
-  //   .get('h3[alt="business"]')
-  //     .contains('Donald Duck Den')
-  //   .get('p[alt="address"]')
-  //     .contains('2109 Ducky Dr')
-  //   .get('p[alt="city and state"]')
-  //     .contains('Toledo, OH')
-  //   .get('p[alt="miles away"]')
-  //     .contains('0.61 mi')
-  // })  
+  it('should display restroom info on cards', () => {
+    cy.wait(1000)
+    .get('h3[alt="business"]')
+      .contains('Donald Duck Den')
+    .get('p[alt="city and state"]')
+      .contains('Toledo, OH')
+    .get('p[alt="miles away"]')
+      .contains('0.61 mi')
+  })  
 
   it('should make card values consistent and abbreviated', () => {
     cy.get('p[alt="city and state"]')
