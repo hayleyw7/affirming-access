@@ -43,5 +43,4 @@ describe('FAQ Page', () => {
     .get('h3')
       .contains('FAQ')
   });        
-
 })
