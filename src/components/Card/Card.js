@@ -1,6 +1,5 @@
 import React from 'react';
 import './Card.css';
-// var normalize = require('us-states-normalize');
 
 const Card = ({ name, street, city, state, distance }) => {
   

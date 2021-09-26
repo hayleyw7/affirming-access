@@ -5,15 +5,15 @@ export const getRestrooms = (lat, long) => {
     .then(response => response.json())
 }
 
-// export const getZip = async (zip) => {
-//   const url = `https://api.zippopotam.us/us/${zip}`
+export const fetchZip = (zip) => {
+  const url = `https://api.zippopotam.us/us/${zip}`
 
-//   return fetch(url)
-//     .then(response => response.json())
-//     .then(data => {
-//       return data.places[0]
-//     })
-// }
+  return fetch(url)
+    .then(response => response.json())
+    .then(data => {
+      return data.places[0]
+    })
+}
 
 
 

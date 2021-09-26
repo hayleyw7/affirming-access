@@ -24,8 +24,6 @@ Cypress.Commands.add('loadAllRestrooms', (lat, long) => {
   cy.get('button[alt="Show List Button"]')
     .click()
 
-    
-
   cy.intercept('https://api.zippopotam.us/us/43606', {
     fixture: 'zip_test_data.json',
   })

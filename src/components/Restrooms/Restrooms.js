@@ -5,9 +5,6 @@ import './Restrooms.css';
 
 const Restrooms = ({ restrooms }) => {
 
-  // const refreshPage = () => {
-  //   window.location.reload();
-  // }
 
   const restroomCards = restrooms.map(restroom => {
     return (
