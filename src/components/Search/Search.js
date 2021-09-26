@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './Search.css';
 import Footer from '../Footer/Footer';
+// import { getZip } from '../../utilities/apiCalls';
 // import { Link } from 'react-router-dom';
 
 class Search extends Component {
@@ -48,10 +49,10 @@ class Search extends Component {
       const checkbox = document.querySelector(".checkbox");
 
       if (checkbox.checked === false) {
-        this.props.fetchAllRestrooms('all', location.latitude, location.longitude);
+        this.props.fetchRestrooms('all', location.latitude, location.longitude);
   
       } else {
-        this.props.fetchAllRestrooms('genderFree', location.latitude, location.longitude);
+        this.props.fetchRestrooms('genderFree', location.latitude, location.longitude);
       }
     }
 
