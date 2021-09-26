@@ -1,10 +1,8 @@
 import React from 'react';
 import Card from '../Card/Card';
 import './Restrooms.css';
-// import { Link } from 'react-router-dom';
 
 const Restrooms = ({ restrooms }) => {
-
 
   const restroomCards = restrooms.map(restroom => {
     return (
