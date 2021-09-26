@@ -20,6 +20,8 @@ class App extends Component {
   fetchAllRestrooms = (type, lat, long) => {
     const url = `https://www.refugerestrooms.org/api/v1/restrooms/by_location?page=1&per_page=5&offset=0&lat=${lat}&lng=${long}`
 
+    this.setState({ restrooms: [] })
+
     const responseAction = response => response.json()
     const catchAction = error => this.setState({errorKey: error})
 
