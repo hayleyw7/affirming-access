@@ -20,7 +20,7 @@ describe('FAQ Page', () => {
 
   it('should render answers', () => {
     cy.get('p')
-      .contains('had been denied restroom access')
+      .contains('safe and affirming')
   })    
 
   it('should display return home button', () => {

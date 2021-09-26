@@ -15,9 +15,7 @@ describe('Search Page', () => {
 
 
   it('should render search component', () => {
-    cy.get('h3')
-      .contains('Find Safe Restrooms Near You')
-    .get('input[alt="Enter Zip Code"]')
+    cy.get('input[alt="Enter Zip Code"]')
       .should('be.visible')
     .get('input[alt="Gender Free Only"]')
       .should('be.visible')
@@ -28,7 +26,7 @@ describe('Search Page', () => {
   it('should render footer', () => {
     cy.get('button[alt="FAQ"]')
       .contains('FAQ')
-    .get('h4')
+    .get('p')
       .contains('You deserve gender euphoria.')
   })
 
@@ -45,9 +43,6 @@ describe('Search Page', () => {
 
     .get('button[alt="Show List Button"]')
       .click()
-
-    .get('button[alt="Start Over"]')
-      .should('be.visible')
   })    
 
   it('should stay on this page if random elements are clicked', () => {
@@ -57,8 +52,6 @@ describe('Search Page', () => {
       .click()  
     .get('div[class="App"]')
       .click()    
-    .get('h3')
-      .contains('Find Safe Restrooms Near You')
   });
 
 })
