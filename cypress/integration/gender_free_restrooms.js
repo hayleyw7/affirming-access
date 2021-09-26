@@ -1,39 +1,39 @@
 describe('Restrooms Page - Gender Free', () => {
 
   beforeEach(() => {
-    cy.loadGenderFreeRestrooms()
+    cy.loadGenderFreeRestrooms(41.6712, -83.606)
   })
 
   // delete this once stub works
 
-  it('should not display gendered restrooms', () => {
-    cy.wait(1000)
-    .get('h3[alt="business"]')
-      .should('not.contain', 'Center For Performing Arts')
-  }) 
-
-  // uncomment this once stub works
-
   // it('should not display gendered restrooms', () => {
   //   cy.wait(1000)
   //   .get('h3[alt="business"]')
-  //     .should('not.contain', 'Donald Duck Den')
-  // })  
-
-  // delete this once stub works
-
-  it('should display gendered restrooms', () => {
-    cy.wait(1000)
-    .get('h3[alt="business"]')
-      .contains('UT Student Union')
-  }) 
+  //     .should('not.contain', 'Center For Performing Arts')
+  // }) 
 
   // uncomment this once stub works
+
+  it('should not display gendered restrooms', () => {
+    // cy.wait(1000)
+    cy.get('h3[alt="business"]')
+      .should('not.contain', 'Donald Duck Den')
+  })  
+
+  // delete this once stub works
 
   // it('should display gendered restrooms', () => {
   //   cy.wait(1000)
   //   .get('h3[alt="business"]')
-  //     .contains('Gender Free Gala Space')
+  //     .contains('UT Student Union')
   // }) 
+
+  // uncomment this once stub works
+
+  it('should display gendered restrooms', () => {
+    // cy.wait(1000)
+    cy.get('h3[alt="business"]')
+      .contains('Gender Free Gala Space')
+  }) 
 
 })

@@ -35,7 +35,7 @@ Cypress.Commands.add('loadAllRestrooms', (lat, long) => {
   })  
 })
 
-Cypress.Commands.add('loadGenderFreeRestrooms', () => {
+Cypress.Commands.add('loadGenderFreeRestrooms', (lat, long) => {
 
   cy.visit('http://localhost:3000')
 
@@ -52,7 +52,7 @@ Cypress.Commands.add('loadGenderFreeRestrooms', () => {
     fixture: 'zip_test_data.json',
   })
 
-  cy.intercept('https://www.refugerestrooms.org/api/v1/restrooms/by_location?page=1&per_page=5&offset=0&lat=${lat}&lng=${long}', {
+  cy.intercept(`https://www.refugerestrooms.org/api/v1/restrooms/by_location?page=1&per_page=5&offset=0&lat=${lat}&lng=${long}`, {
     fixture: 'restrooms_test_data.json',
   })  
 })
