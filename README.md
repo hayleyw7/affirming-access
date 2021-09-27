@@ -78,7 +78,7 @@ To do additional searches, they user just enters searches for another zipcode, u
   <img src="./src/assets/Loader.png" alt="loader screenshot" width="250"/>
 </p>
 
-## Future addition
+## Future additions
 
 * I will implement 404 and 500 error pages.
 
