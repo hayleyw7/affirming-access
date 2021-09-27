@@ -2,7 +2,7 @@
 
 Affirming Access provides safe and affirming restroom access for transgender, intersex, and gender nonconforming individuals.
 
-<!-- [It can be accessed here.](deploy link) -->
+[It can be accessed here.](https://affirming-access.surge.sh/)
 
 ## Motivation
 
@@ -42,7 +42,7 @@ Built with Visual Studio Code
 
 ## Access and use website
 
-Visit the site [here](link).
+Visit the site [here](https://affirming-access.surge.sh/).
 
 To read more about the site, select "FAQ" at the bottom right of the page.
 
@@ -56,22 +56,31 @@ To do additional searches, they user just enters searches for another zipcode, u
 
 ### Mobile
 
-![mobile search](link.jpg) 
-![mobile restrooms](link.jpg)
+<p>
+  <img src="./src/assets/Search-mobile.png" alt="mobile search screenshot" width="200"/>
+  <img src="./src/assets/Restrooms-mobile.png" alt="mobile restrooms screenshot" width="200"/>
+  <img src="./src/assets/FAQ-mobile.png" alt="mobile faq screenshot" width="200"/>
+</p>
 
 ### Desktop
 
-![desktop search](link.jpg) 
-![desktop restrooms](link.jpg)
+<p>
+  <img src="./src/assets/Search-desktop.png" alt="desktop search screenshot" width="250"/>
+  <img src="./src/assets/Restrooms-desktop.png" alt="desktop restrooms screenshot" width="250"/>
+  <img src="./src/assets/FAQ-desktop.png" alt="desktop faq screenshot" width="250"/>
+</p>
 
-### Errors & loading
+### Error handling & Loader
 
-![loading](link.jpg) 
-![error](link.jpg) 
+<p>
+  <img src="./src/assets/Error.png" alt="error screenshot" width="250"/>
+  <img src="./src/assets/bad-zip-error.png" alt="bad zip screenshot" width="250"/>
+  <img src="./src/assets/Loader.png" alt="loader screenshot" width="250"/>
+</p>
 
 ## Future addition
 
-* I will implement the drafted error page.
+* I will implement 404 and 500 error pages.
 
 * I will add geolocation.
 
