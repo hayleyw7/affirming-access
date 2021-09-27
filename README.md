@@ -81,4 +81,4 @@ Project completed by [Hayley Witherell](https://github.com/hayleyw7)
 
 Project designed by instructors at Turing School of Art & Design
 
-API by [Zippopotam.us](https://zippopotam.us/) & [Refuge Restrooms](https://www.refugerestrooms.org/)
+APIs by [Zippopotam.us](https://zippopotam.us/) & [Refuge Restrooms](https://www.refugerestrooms.org/)
