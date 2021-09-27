@@ -35,10 +35,10 @@ class Search extends Component {
       const checkbox = document.querySelector(".checkbox");
 
       if (checkbox.checked === false) {
-        this.props.fetchRestrooms('all', location.latitude, location.longitude);
+        this.props.getRestrooms('all', location.latitude, location.longitude);
   
       } else {
-        this.props.fetchRestrooms('genderFree', location.latitude, location.longitude);
+        this.props.getRestrooms('genderFree', location.latitude, location.longitude);
       }
     }
 
