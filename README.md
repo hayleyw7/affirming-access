@@ -57,9 +57,9 @@ To do additional searches, they user just enters searches for another zipcode, u
 ### Mobile
 
 <p>
-  <img src="./src/assets/Search-mobile.jpg" alt="mobile search screenshot" width="200"/>
-  <img src="./src/assets/Restrooms-mobile.jpg" alt="mobile restrooms screenshot" width="200"/>
-  <img src="./src/assets/FAQ-mobile.jpg" alt="mobile faq screenshot" width="200"/>
+  <img src="./src/assets/Search-mobile-s10.jpg" alt="mobile search screenshot" width="200"/>
+  <img src="./src/assets/Restrooms-mobile-s10.jpg" alt="mobile restrooms screenshot" width="200"/>
+  <img src="./src/assets/FAQ-mobile-s10.jpg" alt="mobile faq screenshot" width="200"/>
 </p>
 
 ### Desktop
