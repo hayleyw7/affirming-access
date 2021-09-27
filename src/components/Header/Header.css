@@ -1,19 +1,6 @@
-/* .app-title {
-  color: white;
-  font-size: 50px;
-  background: #A56FD9;
-  margin: 0;
-  width: auto;
-}
-
 .header-bar {
-  background: black;
-  padding: 1rem;
-} */
-
-.header-bar {
-  color: white;
   background: #7c55a1;
-  width: 100%;
+  color: white;
   font-size: 20px;
+  width: 100%;
 }

@@ -1,43 +1,44 @@
 .footer-bar {
-  color: white;
   background: #287d7d;
-  position: fixed;
-  left: 0;
   bottom: 0;
-  width: 100%;
+  color: white;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  left: 0;
   padding-bottom: .7rem;
+  position: fixed;
+  width: 100%;
 }
 
 .euphoria {
-  /* border: 1px black solid; */
-  margin-top: 1.6rem;
   font-weight: bold;
+  margin-top: 1.6rem;
 }
 
 .faq-btn {
-  font-size: 16px;
-  background: transparent;
-  color: white;
-  border: 0;
-  /* border: 1px black solid; */
-  display: inline-block;
   animation: wiggle 2.5s infinite;
-  margin: .3rem 0 -.3rem 0;
-  /* height: 2rem; */ 
+  background: transparent;
+  border: 0;
+  color: white;
   cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  margin: .3rem 0 -.3rem 0;
 }
 
 .faq-btn:hover {
-  color: #DCDCDC;
   animation: none;
+  color: #DCDCDC;
 }
 
 .faq-text {
   font-weight: bold;
   margin-top: 1.3rem;
+}
+
+.hidden {
+  display: none;
 }
 
 @keyframes wiggle {
@@ -46,8 +47,4 @@
    85% { transform: rotate(15deg); }
    95% { transform: rotate(-15deg); }
   100% { transform: rotate(0deg); }
-}
-
-.hidden {
-  display: none;
 }

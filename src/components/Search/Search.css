@@ -1,65 +1,53 @@
+.find-safe {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 3rem 0 -.1rem 0;
+}
+
 form {
-  margin: 1rem;
+  align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* flex-wrap: wrap; */
-  align-items: center;
+  margin: 1rem;
 }
 
-input,
+.zip-input,
 .show-list-btn {
-  margin: .5rem;
-  border-radius: .25rem;
   background: white;
-  color: black;
+  border-radius: .25rem;
   border: 1px black solid;
+  color: black;
   font-size: 20px;
-}
-
-checkbox {
-  padding: .5rem 1.5rem .5rem 1.5rem;
-  text-align: center;
+  margin: .5rem;
 }
 
 .zip-input {
-  width: 15rem;  
   height: 2.5rem;
   padding-left: 1rem;
   text-align: center;
+  width: 15rem;  
 }
 
 .show-list-btn {
-  /* background: #DDDA25; */
   background: #c98175;
-  /* max-width: 12rem; */
-  padding: 1rem 3rem 1rem 3rem;
-  color: white;
-  font-weight: bold;
   border: 0;
+  color: white;
   cursor: pointer;
+  font-weight: bold;
+  padding: 1rem 3rem 1rem 3rem;
 }
 
 .show-list-btn:hover {
   transform: scale(1.1); 
 }
 
-.checkbox {
-  margin: .5rem .5rem 1.5rem 0;
-  font-size: 15px;
-}
-
-.find-safe {
-  font-size: 20px;
-  margin: 3rem 0 -.1rem 0;
-  font-weight: bold;
-}
-
-.euphoria {
-  margin: 1rem 0 1rem 0;
-}
-
 .bad-zip {
-  margin-top: -.3rem;
   color: #c98175;
+  margin-top: -.3rem;
+}
+
+.checkbox {
+  font-size: 15px;
+  margin: .5rem .5rem 1.5rem 0;
 }

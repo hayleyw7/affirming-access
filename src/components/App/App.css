@@ -1,28 +1,15 @@
 .App {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
   text-align: center;
-  /* width: 96.7%; */
 }
-
-/* .search-page {
-  width: 100%;
-} */
 
 .faq-page {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  /* background: #38B3B4; */
 }
-
-/* .restrooms-page {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  flex-direction: row;
-} */
 
 .hidden {
   display: none;
