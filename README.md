@@ -4,14 +4,6 @@ Affirming Access provides safe and affirming restroom access for transgender, in
 
 <!-- [It can be accessed here.](deploy link) -->
 
-## Rubric
-
-This project was completed as a project at Turing School of Software & Design during Module 3.
-
-[The rubric is linked here.](https://frontend.turing.edu/projects/module-3/showcase.html)
-
-The goals and objectives were to use the technology you’ve been working with over the course of the module to demonstrate mastery React, Router, Asynchronous JavaScript, end-to-end testing with Cypress, and creating personas and user stories to describe a target audience.
-
 ## Motivation
 
 Why is this important?
@@ -23,6 +15,14 @@ According to respondents of the [US Transgender Survey](https://www.ustranssurve
 - 12% were harassed, attacked, or sexually assaulted in a restroom
 - 9% were denied restroom access
 - 8% developed a kidney issue or UTI from avoiding restrooms
+
+## Rubric
+
+This project was completed as a project at Turing School of Software & Design during Module 3.
+
+[The rubric is linked here.](https://frontend.turing.edu/projects/module-3/showcase.html)
+
+The goals and objectives were to use the technology we’ve been working with over the course of the module to demonstrate mastery React, Router, Asynchronous JavaScript, end-to-end testing with Cypress, and creating personas and user stories to describe a target audience.
 
 ## Reflections
 
