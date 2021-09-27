@@ -1,70 +1,84 @@
-# Getting Started with Create React App
+# Affirming Access
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Affirming Access provides safe and affirming restroom access for transgender, intersex, and gender nonconforming individuals.
 
-## Available Scripts
+<!-- [It can be accessed here.](deploy link) -->
 
-In the project directory, you can run:
+## Rubric
 
-### `npm start`
+This project was completed as a project at Turing School of Software & Design during Module 3.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+[The rubric is linked here.](https://frontend.turing.edu/projects/module-3/showcase.html)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+The goals and objectives were to use the technology you’ve been working with over the course of the module to demonstrate mastery React, Router, Asynchronous JavaScript, end-to-end testing with Cypress, and creating personas and user stories to describe a target audience.
 
-### `npm test`
+## Motivation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Why is this important?
 
-### `npm run build`
+According to respondents of the [US Transgender Survey](https://www.ustranssurvey.org/):
+- 59% avoided using a restroom for fear of confrontation
+- 31% avoided eating/drinking to avoid restrooms
+- 24% had their presence in the restroom questioned
+- 12% were harassed, attacked, or sexually assaulted in a restroom
+- 9% were denied restroom access
+- 8% developed a kidney issue or UTI from avoiding restrooms
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Reflections
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+A challenge was working out stubbing.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Big successes were Router, API calls, data cleaning, and getting stubbing to work.
 
-### `npm run eject`
+## Languages and technology
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Utilizes JavaScript, React, CSS, HTML/JSX, NPM, Node, Cypress, Normalizer, & Surge
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Built with Visual Studio Code
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+[Code stored on GitHub](https://github.com/hayleyw7/affirming-access)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+[Project board on GitHub](https://github.com/hayleyw7/affirming-access/projects/1) 
 
-## Learn More
+## Access and use website
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Visit the site [here](link).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+To read more about the site, select "FAQ" at the bottom right of the page.
 
-### Code Splitting
+To access restrooms, the user must enter the zip code where they are located, choose whether or not to check the "Gender Neutral Only?" box, and then click "Search Now".
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+They will be presented up to five of the closest restrooms that users deemed as safe to them.
 
-### Analyzing the Bundle Size
+To do additional searches, they user just enters searches for another zipcode, using the steps above.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Screenshots
 
-### Making a Progressive Web App
+### Mobile
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+![mobile search](link.jpg) 
+![mobile restrooms](link.jpg)
 
-### Advanced Configuration
+### Desktop
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+![desktop search](link.jpg) 
+![desktop restrooms](link.jpg)
 
-### Deployment
+### Errors & loading
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+![loading](link.jpg) 
+![error](link.jpg) 
 
-### `npm run build` fails to minify
+## Future addition
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* I will implement the drafted error page.
+
+* I will add geolocation.
+
+## Contributors
+
+Project completed by [Hayley Witherell](https://github.com/hayleyw7)
+
+Project designed by instructors at Turing School of Art & Design
+
+API by [Zippopotam.us](https://zippopotam.us/) & [Refuge Restrooms](https://www.refugerestrooms.org/)
