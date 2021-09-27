@@ -2,7 +2,7 @@
 
 Affirming Access provides safe and affirming restroom access for transgender, intersex, and gender nonconforming individuals.
 
-<!-- [It can be accessed here.](deploy link) -->
+[It can be accessed here.](https://affirming-access.surge.sh/)
 
 ## Motivation
 
@@ -42,7 +42,7 @@ Built with Visual Studio Code
 
 ## Access and use website
 
-Visit the site [here](link).
+Visit the site [here](https://affirming-access.surge.sh/).
 
 To read more about the site, select "FAQ" at the bottom right of the page.
 
@@ -80,7 +80,7 @@ To do additional searches, they user just enters searches for another zipcode, u
 
 ## Future addition
 
-* I will implement the drafted error page.
+* I will implement 404 and 500 error pages.
 
 * I will add geolocation.
 
