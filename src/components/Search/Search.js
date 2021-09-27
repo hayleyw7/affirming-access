@@ -18,6 +18,7 @@ class Search extends Component {
 
   handleClick = async (event) => {
     event.preventDefault();
+    document.querySelector(".bad-zip").classList.add("hidden");
 
     let location = await fetchLocation(this.state.location).catch(
       error => this.setState({errorKey: error})
@@ -29,7 +30,7 @@ class Search extends Component {
       document.querySelector(".restrooms-page").classList.add("hidden");
 
     } else {
-
+      
       this.props.showRestrooms();      
 
       const checkbox = document.querySelector(".checkbox");
