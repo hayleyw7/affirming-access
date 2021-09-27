@@ -65,17 +65,17 @@ To do additional searches, they user just enters searches for another zipcode, u
 ### Desktop
 
 <p>
-  <img src="./src/assets/Search-desktop.png" alt="desktop search screenshot" width="300"/>
-  <img src="./src/assets/Restrooms-desktop.png" alt="desktop restrooms screenshot" width="300"/>
-  <img src="./src/assets/FAQ-desktop.png" alt="desktop faq screenshot" width="300"/>
+  <img src="./src/assets/Search-desktop.png" alt="desktop search screenshot" width="250"/>
+  <img src="./src/assets/Restrooms-desktop.png" alt="desktop restrooms screenshot" width="250"/>
+  <img src="./src/assets/FAQ-desktop.png" alt="desktop faq screenshot" width="250"/>
 </p>
 
 ### Error handling & Loader
 
 <p>
-  <img src="./src/assets/Error.png" alt="error screenshot" width="300"/>
-  <img src="./src/assets/Loader.png" alt="loader screenshot" width="300"/>
-  <img src="./src/assets/bad-zip.png" alt="bad zip screenshot" width="300"/>
+  <img src="./src/assets/Error.png" alt="error screenshot" width="250"/>
+  <img src="./src/assets/Loader.png" alt="loader screenshot" width="250"/>
+  <img src="./src/assets/bad-zip.png" alt="bad zip screenshot" width="250"/>
 </p>
 
 ## Future addition
