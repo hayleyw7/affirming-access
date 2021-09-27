@@ -1,4 +1,4 @@
-import { cleanRestroomsData, cleanZipData } from './dataCleaning';
+import { cleanRestroomsData, cleanLocationData } from './dataCleaning';
 
 export const getRestrooms = (lat, long) => {
   const url = `https://www.refugerestrooms.org/api/v1/restrooms/by_location?page=1&per_page=5&offset=0&lat=${lat}&lng=${long}`
@@ -8,12 +8,12 @@ export const getRestrooms = (lat, long) => {
     .then(data => cleanRestroomsData(data))
 }
 
-export const fetchZip = (zip) => {
+export const fetchLocation = (zip) => {
   const url = `https://api.zippopotam.us/us/${zip}`
 
   return fetch(url)
     .then(response => response.json())
-    .then(data => cleanZipData(data))
+    .then(data => cleanLocationData(data))
 }
 
 export const setErrorStatus = () => {

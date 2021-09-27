@@ -1,5 +1,12 @@
 var normalize = require('us-states-normalize');
 
+export const cleanLocationData = (data) => {
+    return {
+      latitude: data.places[0].latitude,
+      longitude: data.places[0].longitude
+    }
+}
+
 export const cleanRestroomsData = (data) => {
 
   return data.map(restroom => {
@@ -30,11 +37,4 @@ export const cleanRestroomsData = (data) => {
         .split('and').join('&').split('.').join('')
     }
   })
-}
-
-export const cleanZipData = (data) => {
-    return {
-      latitude: data.places[0].latitude,
-      longitude: data.places[0].longitude
-    }
 }
