@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './Search.css';
 import Footer from '../Footer/Footer';
-import { fetchZip } from '../../utilities/apiCalls';
+import { fetchLocation } from '../../utilities/apiCalls';
 
 class Search extends Component {
   constructor( props ) {
@@ -19,7 +19,7 @@ class Search extends Component {
   handleClick = async (event) => {
     event.preventDefault();
 
-    let location = await fetchZip(this.state.zip).catch(
+    let location = await fetchLocation(this.state.zip).catch(
       error => this.setState({errorKey: error})
     )
 
@@ -35,10 +35,10 @@ class Search extends Component {
       const checkbox = document.querySelector(".checkbox");
 
       if (checkbox.checked === false) {
-        this.props.fetchRestrooms('all', location.latitude, location.longitude);
+        this.props.getRestrooms('all', location.latitude, location.longitude);
   
       } else {
-        this.props.fetchRestrooms('genderFree', location.latitude, location.longitude);
+        this.props.getRestrooms('genderFree', location.latitude, location.longitude);
       }
     }
 

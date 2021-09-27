@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Route } from "react-router";
-import { getRestrooms } from '../../utilities/apiCalls';
+import { fetchRestrooms } from '../../utilities/apiCalls';
 
 import './App.css';
 import Restrooms from '../Restrooms/Restrooms';
@@ -18,7 +18,7 @@ class App extends Component {
     }
   };
 
-  fetchRestrooms = (type, lat, long) => {
+  getRestrooms = (type, lat, long) => {
 
     this.setState({ restrooms: [] })
 
@@ -26,13 +26,13 @@ class App extends Component {
 
     if (type === 'all') {
 
-      getRestrooms(lat, long)
+      fetchRestrooms(lat, long)
         .then(data => {this.setState({restrooms: data})})
         .catch(setErrorStatus)
       
     } else if (type === 'genderFree') {
       
-      getRestrooms(lat, long)
+      fetchRestrooms(lat, long)
         .then(data => {
           this.setState({ 
             restrooms: data.filter(
@@ -59,7 +59,7 @@ class App extends Component {
             <div>
 
               <div className='search-page'>     
-                <Search fetchRestrooms={this.fetchRestrooms} showRestrooms={this.showRestrooms}/>    
+                <Search getRestrooms={this.getRestrooms} showRestrooms={this.showRestrooms}/>    
               </div>      
 
               <div className='restrooms-page hidden'>
