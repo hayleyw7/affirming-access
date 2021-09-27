@@ -7,7 +7,7 @@ class Search extends Component {
   constructor( props ) {
     super();
     this.state = {
-      zip: {},
+      location: {},
       errorKey: ''
     }
   }
@@ -19,7 +19,7 @@ class Search extends Component {
   handleClick = async (event) => {
     event.preventDefault();
 
-    let location = await fetchLocation(this.state.zip).catch(
+    let location = await fetchLocation(this.state.location).catch(
       error => this.setState({errorKey: error})
     )
 
@@ -42,7 +42,7 @@ class Search extends Component {
       }
     }
 
-    this.setState({ zip: {} });
+    this.setState({ location: {} });
     document.querySelector(".checkbox").checked = false;
   }  
 
@@ -56,10 +56,10 @@ class Search extends Component {
           <input
             type='number'
             placeholder='Enter Zip Code'
-            name='zip'
+            name='location'
             alt='Enter Zip Code'
             className='zip-input'
-            value={this.state.zip}
+            value={this.state.location}
             onChange={event => this.handleChange(event)}
           />    
 
