@@ -7,7 +7,7 @@ class Search extends Component {
   constructor( props ) {
     super();
     this.state = {
-      zip: '',
+      zip: {},
       errorKey: ''
     }
   }
@@ -42,7 +42,7 @@ class Search extends Component {
       }
     }
 
-    this.setState({ zip: '' });
+    this.setState({ zip: {} });
     document.querySelector(".checkbox").checked = false;
   }  
 
