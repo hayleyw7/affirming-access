@@ -56,18 +56,27 @@ To do additional searches, they user just enters searches for another zipcode, u
 
 ### Mobile
 
-![mobile search](link.jpg) 
-![mobile restrooms](link.jpg)
+<p>
+  <img src="./src/assets/Search-mobile.png" alt="mobile search screenshot" width="200"/>
+  <img src="./src/assets/Restrooms-mobile.png" alt="mobile restrooms screenshot" width="200"/>
+  <img src="./src/assets/FAQ-mobile.png" alt="mobile faq screenshot" width="200"/>
+</p>
 
 ### Desktop
 
-![desktop search](link.jpg) 
-![desktop restrooms](link.jpg)
+<p>
+  <img src="./src/assets/Search-desktop.png" alt="desktop search screenshot" width="300"/>
+  <img src="./src/assets/Restrooms-desktop.png" alt="desktop restrooms screenshot" width="300"/>
+  <img src="./src/assets/FAQ-desktop.png" alt="desktop faq screenshot" width="300"/>
+</p>
 
-### Errors & loading
+### Error handling & Loader
 
-![loading](link.jpg) 
-![error](link.jpg) 
+<p>
+  <img src="./src/assets/Error.png" alt="error screenshot" width="300"/>
+  <img src="./src/assets/Loader.png" alt="loader screenshot" width="300"/>
+  <img src="./src/assets/bad-zip.png" alt="bad zip screenshot" width="300"/>
+</p>
 
 ## Future addition
 
