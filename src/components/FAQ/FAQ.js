@@ -8,7 +8,7 @@ const FAQ = () => {
     <div className='faq-page'>    
       <section className='faq-card'>  
 
-        <h3 className='faq-title'>FAQ</h3>  
+        <h2 className='faq-title'>FAQ</h2>  
 
         <p className='question'>
           What is this app?
