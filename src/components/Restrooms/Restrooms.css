@@ -1,29 +1,8 @@
-.start-over-btn {
-  margin: .5rem .5rem 1.5rem .5rem;
-  border-radius: .25rem;
-  background: white;
-  color: black;
-  border: 1px black solid;
-  font-size: 20px;
-    /* background: #DDDA25; */
-  background: #c98175;
-  /* max-width: 12rem; */
-  padding: 1rem 3rem 1rem 3rem;
-  color: white;
-  font-weight: bold;
-  border: 0;
-  cursor: pointer;
-}
-
-.start-over-btn:hover {
-  transform: scale(1.1); 
-}
-
 .restrooms-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   flex-direction: row;
-  width: 100%;
+  justify-content: center;
   margin-bottom: 1rem;
+  width: 100%;
 }
