@@ -7,6 +7,7 @@ import Restrooms from '../Restrooms/Restrooms';
 import Search from '../Search/Search';
 import Header from '../Header/Header';
 import Loader from '../Loader/Loader';
+import Error from '../Error/Error';
 import FAQ from '../FAQ/FAQ';
 
 class App extends Component {
@@ -22,13 +23,11 @@ class App extends Component {
 
     this.setState({ restrooms: [] })
 
-    const setErrorStatus = error => this.setState({errorKey: error})
-
     if (type === 'all') {
 
       fetchRestrooms(lat, long)
         .then(data => {this.setState({restrooms: data})})
-        .catch(setErrorStatus)
+        .catch(error => this.setState({errorKey: error}))
       
     } else if (type === 'genderFree') {
       
@@ -40,7 +39,7 @@ class App extends Component {
             )
           })
         })
-        .catch(setErrorStatus)
+        .catch(error => this.setState({errorKey: error}))
     }
   }
 
@@ -63,7 +62,9 @@ class App extends Component {
               </div>      
 
               <div className='restrooms-page hidden'>
-                {!this.state.restrooms.length ? <Loader /> :
+                {
+                  this.state.errorKey === 'error' ? <Error /> :
+                  !this.state.restrooms.length ? <Loader /> :
                   <Restrooms restrooms={this.state.restrooms} />
                 }
               </div>

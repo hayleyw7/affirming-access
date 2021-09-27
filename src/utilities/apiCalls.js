@@ -15,7 +15,3 @@ export const fetchLocation = (zip) => {
     .then(response => response.json())
     .then(data => cleanLocationData(data))
 }
-
-export const setErrorStatus = () => {
-  return error => this.setState({errorKey: error})
-}
