@@ -48,7 +48,7 @@ To read more about the site, select "FAQ" at the bottom right of the page.
 
 To access restrooms, the user must enter the zip code where they are located, choose whether or not to check the "Gender Neutral Only?" box, and then click "Search Now".
 
-They will be presented up to five of the closest restrooms that users deemed as safe to them.
+They will be presented up to five of the closest safe restrooms.
 
 To do additional searches, they user just enters searches for another zipcode, using the steps above.
 
